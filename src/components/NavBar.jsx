@@ -6,7 +6,7 @@ import clsx from 'clsx'
 const sections = [
   { id: 'use', title: 'Use Arweave', icon: '👤' },
   { id: 'build', title: 'Build on Arweave', icon: '</>' },
-  { id: 'entrepreneurs', title: 'Entrepreneurs', icon: '$' },
+  { id: 'funding', title: 'Get Funded', icon: '$' },
 ]
 
 function MenuIcon({ open, ...props }) {
@@ -137,7 +137,7 @@ export function NavBar() {
       <div className="hidden sm:flex sm:h-32 sm:justify-center sm:border-b sm:border-gray-200 sm:bg-white/95 sm:[@supports(backdrop-filter:blur(0))]:bg-white/80 sm:[@supports(backdrop-filter:blur(0))]:backdrop-blur">
         <ol
           role="list"
-          className="mb-[-2px] grid auto-cols-[minmax(0,15rem)] grid-flow-col text-base font-medium text-gray-900 [counter-reset:section]"
+          className="mb-[-2px] grid auto-cols-[minmax(0,15rem)] grid-flow-col text-2xl font-medium text-gray-900 [counter-reset:section]"
         >
           {sections.map((section, sectionIndex) => (
             <li key={section.id} className="flex [counter-increment:section]">

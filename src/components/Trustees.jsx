@@ -32,7 +32,7 @@ export function Trustees() {
                 src={trustee.logo}
                 alt={trustee.name}
                 width={158}
-                className="grayscale"
+                className="grayscale transition duration-300 ease-in-out hover:grayscale-0"
                 unoptimized
               />
             </div>
