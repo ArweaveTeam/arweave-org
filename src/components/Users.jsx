@@ -1,4 +1,8 @@
+import Image from 'next/image'
+
 import { Container } from '@/components/Container'
+import logoAkord from '@/images/logos/akord.svg'
+import logoArdrive from '@/images/logos/ardrive.svg'
 
 const resources = {
   'Arweave 101': [
@@ -16,15 +20,21 @@ const resources = {
       title: 'ArConnect',
       link: 'https://www.arconnect.io/',
     },
+    {
+      title: 'Cooper.co',
+      link: 'https://cooper.co/',
+    },
   ],
   'Upload a file forever': [
     {
       title: 'Akord',
       link: 'https://akord.com/',
+      logo: logoAkord,
     },
     {
       title: 'ArDrive',
       link: 'https://ardrive.io/',
+      logo: logoArdrive,
     },
   ],
   'Send a message that will last forever': [
@@ -34,7 +44,7 @@ const resources = {
     },
     {
       title: 'Lens protocol',
-      link: 'https://www.lens.xyz/',
+      link: 'https://lenster.xyz/',
     },
   ],
   'Claim your homepage on the Permaweb': [
@@ -82,8 +92,13 @@ export function Users() {
               </h3>
               <div className="mt-10 divide-y-2 divide-black border-y-2 border-black">
                 {res.map((r) => (
-                  <a href={r.link} target="_blank" className="resource">
+                  <a
+                    href={r.link}
+                    target="_blank"
+                    className="resource relative grayscale transition duration-300 ease-in-out hover:grayscale-0"
+                  >
                     {r.title}
+                    {r.logo && <Image src={r.logo} alt={r.title} />}
                   </a>
                 ))}
               </div>

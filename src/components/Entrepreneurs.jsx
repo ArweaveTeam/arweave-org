@@ -1,48 +1,40 @@
+import Image from 'next/image'
+
 import { Container } from '@/components/Container'
 
-/**
- * Arweave Asia Fund
- * Community Labs
- * Digital History Association
- * Forward Research
- * Hansa
- * Longview Labs
- * PermaDAO
- * Permanent Ventures
- */
 const resources = {
   'Get Funded': [
     {
       title: 'Arweave Asia Fund',
-      link: 'https://arweave.asia/',
+      link: 'https://arweave.asia/', // TODO: Validate this link is right
     },
     {
       title: 'Community Labs',
-      link: 'https://communitylabs.org/',
+      link: 'https://communitylabs.com/',
     },
     {
       title: 'Digital History Association',
-      link: 'https://www.digitalhistoryassociation.org/',
+      link: 'https://dha.arweave.dev/',
     },
     {
       title: 'Forward Research',
-      link: 'https://forward.research/',
+      link: 'https://forward.arweave.dev/',
     },
     {
       title: 'Hansa',
-      link: 'https://hansa.io/',
+      link: 'https://www.hansa.network/',
     },
     {
       title: 'Longview Labs',
-      link: 'https://longviewlabs.com/',
+      link: 'https://longviewlabs.com/', // TODO: Validate this link is right
     },
     {
       title: 'PermaDAO',
-      link: 'https://perma-dao.org/',
+      link: 'https://permadao.notion.site/',
     },
     {
       title: 'Permanent Ventures',
-      link: 'https://permanentventures.com/',
+      link: 'https://permanent.ventures/', // TODO: Validate this link is right
     },
   ],
 }
@@ -73,12 +65,30 @@ export function Entrepreneurs() {
 
         <div className="mx-auto">
           {Object.entries(resources).map(([category, res]) => (
-            <div className="mt-10 divide-y-2 divide-black border-y-2 border-black">
-              {res.map((r) => (
-                <a href={r.link} target="_blank" className="resource">
-                  {r.title}
-                </a>
-              ))}
+            <div>
+              <h3 className="mt-20 font-display text-3xl font-medium">
+                {category}
+              </h3>
+              <div className="mt-10 divide-y-2 divide-black border-y-2 border-black">
+                {res.map((r) => (
+                  <a
+                    href={r.link}
+                    target="_blank"
+                    className="resource relative grayscale transition duration-300 ease-in-out hover:grayscale-0"
+                  >
+                    {r.title}
+                    {r.logo && (
+                      <Image
+                        src={r.logo}
+                        alt={r.title}
+                        width={100}
+                        height={60}
+                        className="absolute right-0 top-2"
+                      />
+                    )}
+                  </a>
+                ))}
+              </div>
             </div>
           ))}
         </div>

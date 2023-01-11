@@ -1,4 +1,8 @@
+import Image from 'next/image'
+
 import { Container } from '@/components/Container'
+import logoEver from '@/images/logos/ever.png'
+import logoWarp from '@/images/logos/warp.png'
 
 const resources = {
   'Down the rabbit hole': [
@@ -17,10 +21,12 @@ const resources = {
     {
       title: 'Warp',
       link: 'https://warp.cc/',
+      logo: logoWarp,
     },
     {
       title: 'EverFinance',
       link: 'https://ever.finance/', // TODO: Validate this link is right
+      logo: logoEver,
     },
     {
       title: 'EXM',
@@ -77,6 +83,7 @@ export function Developers() {
                 {res.map((r) => (
                   <a href={r.link} target="_blank" className="resource">
                     {r.title}
+                    {r.logo && <Image src={r.logo} alt={r.title} />}
                   </a>
                 ))}
               </div>
