@@ -3,7 +3,7 @@ import { Logo } from '@/components/Logo'
 
 export function Footer() {
   return (
-    <footer className="py-16">
+    <footer className="pt-40">
       <Container className="flex flex-col items-center justify-between lg:flex-row">
         <Logo className="text-slate-900 h-12 w-auto" />
         <p className="text-slate-500 mt-6 text-base lg:mt-0">

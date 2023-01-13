@@ -4,9 +4,10 @@ import { Popover } from '@headlessui/react'
 import clsx from 'clsx'
 
 const sections = [
-  { id: 'use', title: 'Use Arweave', icon: '👤' },
-  { id: 'build', title: 'Build on Arweave', icon: '</>' },
-  { id: 'funding', title: 'Get Funded', icon: '$' },
+  { id: '/', title: 'Home', icon: '🏠' },
+  { id: '/use', title: 'Use Arweave', icon: '👤' },
+  { id: '/build', title: 'Build on Arweave', icon: '</>' },
+  { id: '/funding', title: 'Get Funded', icon: '$' },
 ]
 
 function MenuIcon({ open, ...props }) {
@@ -27,50 +28,13 @@ function MenuIcon({ open, ...props }) {
   )
 }
 
-export function NavBar() {
+export function NavBar({ currentPathname }) {
   let navBarRef = useRef()
-  let [activeIndex, setActiveIndex] = useState(null)
-  let mobileActiveIndex = activeIndex === null ? 0 : activeIndex
 
-  useEffect(() => {
-    function updateActiveIndex() {
-      let newActiveIndex = null
-      let elements = sections.map(({ id }) => document.getElementById(id))
-      let bodyRect = document.body.getBoundingClientRect()
-      let offset = bodyRect.top + navBarRef.current.offsetHeight + 1
-
-      if (window.scrollY >= Math.floor(bodyRect.height) - window.innerHeight) {
-        setActiveIndex(sections.length - 1)
-        return
-      }
-
-      for (let index = 0; index < elements.length; index++) {
-        if (
-          window.scrollY >=
-          elements[index].getBoundingClientRect().top - offset
-        ) {
-          newActiveIndex = index
-        } else {
-          break
-        }
-      }
-
-      setActiveIndex(newActiveIndex)
-    }
-
-    updateActiveIndex()
-
-    window.addEventListener('resize', updateActiveIndex)
-    window.addEventListener('scroll', updateActiveIndex, { passive: true })
-
-    return () => {
-      window.removeEventListener('resize', updateActiveIndex)
-      window.removeEventListener('scroll', updateActiveIndex, { passive: true })
-    }
-  }, [])
+  console.log(currentPathname)
 
   return (
-    <div ref={navBarRef} className="sticky top-0 z-50">
+    <div ref={navBarRef} className="fixed bottom-0 right-0 left-0 z-50">
       <Popover className="sm:hidden">
         {({ open }) => (
           <>
@@ -87,10 +51,13 @@ export function NavBar() {
                     aria-hidden="true"
                     className="font-mono text-sm text-gray-600"
                   >
-                    {sections[mobileActiveIndex].icon}
+                    {currentPathname}
                   </span>
                   <span className="ml-4 text-base font-medium text-gray-900">
-                    {sections[mobileActiveIndex].title}
+                    {
+                      sections.find((section) => section.id === currentPathname)
+                        .title
+                    }
                   </span>
                 </>
               )}
@@ -115,7 +82,7 @@ export function NavBar() {
                 <Popover.Button
                   as={Link}
                   key={section.id}
-                  href={`#${section.id}`}
+                  href={`${section.id}`}
                   className="flex items-center py-1.5 px-4"
                 >
                   <span
@@ -142,10 +109,10 @@ export function NavBar() {
           {sections.map((section, sectionIndex) => (
             <li key={section.id} className="flex [counter-increment:section]">
               <Link
-                href={`#${section.id}`}
+                href={`${section.id}`}
                 className={clsx(
                   'flex w-full flex-col items-center justify-center border-b-2 before:mb-2 before:font-mono before:text-sm before:content-[counter(section,decimal-leading-zero)]',
-                  sectionIndex === activeIndex
+                  currentPathname === section.id
                     ? 'border-gray-600 bg-gray-50 text-gray-600 before:text-gray-600'
                     : 'border-transparent before:text-gray-500 hover:bg-gray-50/40 hover:before:text-gray-900'
                 )}

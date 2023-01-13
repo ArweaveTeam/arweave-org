@@ -1,34 +1,34 @@
-import Head from 'next/head'
-
 import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
-import { Hero } from '@/components/Hero'
-import { Entrepreneurs } from '@/components/Entrepreneurs'
-import { Developers } from '@/components/Developers'
-import { Users } from '@/components/Users'
-import { NavBar } from '@/components/NavBar'
-import { Trustees } from '@/components/Trustees'
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <link rel="icon" href="/favicon-183x183.png" />
-        <title>Arweave - A community-driven ecosystem</title>
-        <meta
-          name="description"
-          content="Store data permanently on the decentralized web with Arweave."
-        />
-      </Head>
-      <Header />
-      <main>
-        <Hero />
-        <NavBar />
-        <Users />
-        <Developers />
-        <Entrepreneurs />
-        <Trustees />
-      </main>
+      <div className="mx-auto max-w-2xl lg:max-w-4xl lg:px-12">
+        <h1 className="text-blue-600 font-display text-5xl font-bold tracking-tighter sm:text-6xl">
+          <span className="sr-only">Arweave - </span>Arweave is permanent
+          information storage.
+        </h1>
+        <div className="text-blue-900 mt-6 space-y-6 font-sans text-2xl tracking-tight">
+          <p>
+            Arweave is an open source protocol that allows you to permanently
+            store everything from personal files, artifacts of history, to fully
+            fledged decentralized web applications.
+          </p>
+
+          <p>
+            All data stored on Arweave is composable, queryable and remixable.
+            This enables the creation of a radically different form of web: the
+            Permaweb.
+          </p>
+
+          <p>
+            Arweave is not a typical “crypto project”. Our protocol does not
+            have a team, instead it is powered by a fully decentralized
+            ecosystem. The protocol is complete, mature and widely adopted.
+            Anyone can evolve the Arweave protocol in a permissionless way.
+          </p>
+        </div>
+      </div>
       <Footer />
     </>
   )
