@@ -12,6 +12,7 @@ export default function ResourceList({ resources }) {
         <a
           key={resource.name}
           href={resource.link}
+          target="_blank"
           className="col-span-1 flex flex-col text-center"
         >
           <div className="flex flex-1 flex-col p-8 align-middle">

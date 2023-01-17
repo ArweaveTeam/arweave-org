@@ -1,8 +1,7 @@
 import { Container } from '@/components/Container'
 import { TrustedBy } from '@/components/TrustedBy'
-import screenArweave101 from '@/images/screenshot/use/arweave101.jpg'
+import screenArweave101 from '@/images/screenshot/use/arweave101.png'
 import screenAkord from '@/images/screenshot/use/akord.png'
-import screenLenster from '@/images/screenshot/use/lenster.png'
 import screenPermapages from '@/images/screenshot/use/permapages.png'
 import screenPioneers from '@/images/screenshot/use/pioneers.png'
 import screenArweavenews from '@/images/screenshot/use/arweavenews.png'
@@ -22,11 +21,6 @@ const resources = [
       screenshot: screenAkord,
     },
     {
-      title: 'Send a message that will last forever',
-      link: 'https://lenster.xyz/',
-      screenshot: screenLenster,
-    },
-    {
       title: 'Claim your homepage on the Permaweb',
       link: 'https://permapages.app/',
       screenshot: screenPermapages,
@@ -35,12 +29,12 @@ const resources = [
   // Learn More
   [
     {
-      title: 'Podcasts',
+      title: 'Podcast: Permaweb Pioneers',
       link: 'https://permaweb-pioneers.simplecast.com/',
       screenshot: screenPioneers,
     },
     {
-      title: 'Check out the latest news',
+      title: 'Check out Arweave.news',
       link: 'https://arweave.news/',
       screenshot: screenArweavenews,
     },

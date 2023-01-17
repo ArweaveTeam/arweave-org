@@ -63,7 +63,6 @@ export default function Use() {
       <section
         id="build"
         aria-label="Build on Arweave"
-        className="scroll-mt-14 py-20 sm:py-32"
       >
         <Container className="relative z-10">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl lg:pr-24">
