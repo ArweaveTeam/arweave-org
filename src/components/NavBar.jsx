@@ -30,29 +30,25 @@ function MenuIcon({ open, ...props }) {
 
 export function NavBar({ currentPathname }) {
   let navBarRef = useRef()
-
-  console.log(currentPathname)
+  let miniMenuRef = useRef()
+  let [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div ref={navBarRef} className="fixed bottom-0 right-0 left-0 z-50">
-      <Popover className="sm:hidden">
+    <div ref={navBarRef} className={clsx('fixed bottom-0 right-0 left-0 z-50', isOpen && ' bottom-28')}>
+      <Popover className="sm:hidden"
+          ref={miniMenuRef}>
         {({ open }) => (
           <>
             <div
               className={clsx(
-                'relative flex items-center py-3 px-4',
+                'relative flex items-center py-3 px-4 ',
                 !open &&
-                  'bg-white/95 shadow-sm [@supports(backdrop-filter:blur(0))]:bg-white/80 [@supports(backdrop-filter:blur(0))]:backdrop-blur'
+                  'bg-white/95 shadow-sm [@supports(backdrop-filter:blur(0))]:bg-white/80 [@supports(backdrop-filter:blur(0))]:backdrop-blur',
+                open && ' open'
               )}
             >
               {!open && (
                 <>
-                  <span
-                    aria-hidden="true"
-                    className="font-mono text-sm text-gray-600"
-                  >
-                    {currentPathname}
-                  </span>
                   <span className="ml-4 text-base font-medium text-gray-900">
                     {
                       sections.find((section) => section.id === currentPathname)
@@ -67,6 +63,9 @@ export function NavBar({ currentPathname }) {
                   open && 'relative z-10'
                 )}
                 aria-label="Toggle navigation menu"
+                onClick={() => {
+                  setIsOpen(!isOpen)
+                }}
               >
                 {!open && (
                   <>
@@ -78,19 +77,16 @@ export function NavBar({ currentPathname }) {
               </Popover.Button>
             </div>
             <Popover.Panel className="absolute inset-x-0 top-0 bg-white/95 py-3.5 shadow-sm [@supports(backdrop-filter:blur(0))]:bg-white/80 [@supports(backdrop-filter:blur(0))]:backdrop-blur">
-              {sections.map((section, sectionIndex) => (
+              {sections.map((section) => (
                 <Popover.Button
                   as={Link}
                   key={section.id}
                   href={`${section.id}`}
                   className="flex items-center py-1.5 px-4"
+                  onClick={() => {
+                    setIsOpen(!isOpen)
+                  }}
                 >
-                  <span
-                    aria-hidden="true"
-                    className="font-mono text-sm text-gray-600"
-                  >
-                    {section.icon}
-                  </span>
                   <span className="ml-4 text-base font-medium text-gray-900">
                     {section.title}
                   </span>
@@ -106,7 +102,7 @@ export function NavBar({ currentPathname }) {
           role="list"
           className="mb-[-2px] grid auto-cols-[minmax(0,15rem)] grid-flow-col text-2xl font-medium text-gray-900 [counter-reset:section]"
         >
-          {sections.map((section, sectionIndex) => (
+          {sections.map((section) => (
             <li key={section.id} className="flex [counter-increment:section]">
               <Link
                 href={`${section.id}`}
