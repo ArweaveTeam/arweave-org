@@ -4,12 +4,12 @@ import { Container } from '@/components/Container'
 import ResourceList from '@/components/ResourceList'
 
 import logoCommunitylabs from '@/images/logos/communitylabs.svg'
-import logoDha from '@/images/logos/dha.svg'
+import logoDha from '@/images/logos/dha.png'
 import logoForward from '@/images/logos/forward.png'
 import logoHansa from '@/images/logos/hansa.svg'
 import logoPermadao from '@/images/logos/permadao.png'
 import logoPermaventures from '@/images/logos/permaventures.png'
-import logoLongview from '@/images/logos/longview.svg'
+import logoLongview from '@/images/logos/longview.png'
 
 const resources = [
   {
@@ -51,7 +51,7 @@ const resources = [
     link: 'https://www.hansa.network/',
     logo: logoHansa,
   },
-]
+].sort((a, b) => a.title.localeCompare(b.title))
 
 export default function Fund() {
   return (
