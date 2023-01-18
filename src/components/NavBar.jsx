@@ -34,9 +34,14 @@ export function NavBar({ currentPathname }) {
   let [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div ref={navBarRef} className={clsx('fixed bottom-0 right-0 left-0 z-50', isOpen && ' bottom-28')}>
-      <Popover className="sm:hidden"
-          ref={miniMenuRef}>
+    <div
+      ref={navBarRef}
+      className={clsx(
+        'fixed bottom-0 right-0 left-0 z-50',
+        isOpen && ' bottom-28'
+      )}
+    >
+      <Popover className="sm:hidden" ref={miniMenuRef}>
         {({ open }) => (
           <>
             <div

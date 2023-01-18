@@ -60,10 +60,7 @@ const resources = [
 export default function Use() {
   return (
     <>
-      <section
-        id="build"
-        aria-label="Build on Arweave"
-      >
+      <section id="build" aria-label="Build on Arweave">
         <Container className="relative z-10">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl lg:pr-24">
             <h2 className="text-blue-600 font-display text-4xl font-medium tracking-tighter sm:text-5xl">
