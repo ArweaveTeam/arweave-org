@@ -1,8 +1,6 @@
 import Image from 'next/image'
 
 export default function ResourceScreenList({ resources }) {
-  console.log(resources)
-
   return (
     <div
       role="list"
@@ -13,6 +11,7 @@ export default function ResourceScreenList({ resources }) {
           key={resource.name}
           href={resource.link}
           target="_blank"
+          rel="noreferrer"
           className="col-span-1 flex flex-col text-center  grayscale transition duration-300 ease-in-out hover:grayscale-0"
         >
           <div className="flex flex-1 flex-col pt-8 align-middle">
@@ -22,8 +21,6 @@ export default function ResourceScreenList({ resources }) {
                 <Image
                   src={resource.screenshot}
                   alt={resource.title}
-                  target="_blank"
-                  rel="noreferrer"
                   className="mx-auto inline-block h-auto w-auto flex-shrink-0 rounded-lg object-cover align-middle shadow-lg"
                 />
                 <div className="space-y-1 pt-3 text-xl font-medium leading-6">

@@ -1,8 +1,6 @@
 import Image from 'next/image'
 
 export default function ResourceList({ resources }) {
-  console.log(resources)
-
   return (
     <div
       role="list"
@@ -13,6 +11,7 @@ export default function ResourceList({ resources }) {
           key={resource.name}
           href={resource.link}
           target="_blank"
+          rel="noreferrer"
           className="col-span-1 flex flex-col text-center"
         >
           <div className="flex flex-1 flex-col p-8 align-middle">
@@ -21,8 +20,6 @@ export default function ResourceList({ resources }) {
               <Image
                 src={resource.logo}
                 alt={resource.title}
-                target="_blank"
-                rel="noreferrer"
                 className="mx-auto inline-block h-20 w-auto flex-shrink-0 align-middle grayscale transition duration-300 ease-in-out hover:grayscale-0"
               />
             ) : (

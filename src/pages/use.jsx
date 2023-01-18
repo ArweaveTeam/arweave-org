@@ -59,18 +59,6 @@ export default function Use() {
 
           <div className="mx-auto pt-5">
             <ResourceScreenList resources={resources[0]} />
-            {/* {Object.entries(resources).map(([title, link]) => (
-            <p className='py-2'>
-              <a
-              key={title}
-              href={link}
-              target="_blank"
-              className="text-link"
-            >
-              {title}
-            </a>
-            </p>
-          ))} */}
           </div>
           <h2 className="text-blue-600 pt-5 font-display text-3xl font-medium tracking-tighter sm:text-3xl">
             Learn more
