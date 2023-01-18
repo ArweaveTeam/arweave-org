@@ -23,7 +23,7 @@ export default function ResourceScreenList({ resources }) {
                   src={resource.screenshot}
                   alt={resource.title}
                   target="_blank"
-                  rel="noreferer noopener"
+                  rel="noreferrer"
                   className="mx-auto inline-block h-auto w-auto flex-shrink-0 rounded-lg object-cover align-middle shadow-lg"
                 />
                 <div className="space-y-1 pt-3 text-xl font-medium leading-6">

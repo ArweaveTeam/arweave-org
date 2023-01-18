@@ -74,7 +74,7 @@ export default function Use() {
                 href="https://discord.gg/AhsZfBm"
                 className="text-link"
                 target="_blank"
-                rel="noreferer noopener"
+                rel="noreferrer"
               >
                 Join our Developer Discord
               </a>
