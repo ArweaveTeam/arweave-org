@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import { Container } from '@/components/Container'
 import ResourceList from '@/components/ResourceList'
 
@@ -65,7 +63,7 @@ export default function Fund() {
             <p className="text-blue-900 mt-4 font-display text-2xl tracking-tight">
               Unlock funding and investment opportunities with Arweave.
               Revolutionize the way you store and share data and be a part of
-              Arweave's vision of a decentralized future.
+              Arweave&apos;s vision of a decentralized future.
             </p>
           </div>
 

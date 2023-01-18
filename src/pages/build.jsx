@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import { Container } from '@/components/Container'
 import screenArwiki from '@/images/screenshot/build/arwiki.png'
 import screenCookbook from '@/images/screenshot/build/cookbook.png'
@@ -76,6 +74,7 @@ export default function Use() {
                 href="https://discord.gg/AhsZfBm"
                 className="text-link"
                 target="_blank"
+                rel="noreferer noopener"
               >
                 Join our Developer Discord
               </a>

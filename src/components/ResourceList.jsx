@@ -22,6 +22,7 @@ export default function ResourceList({ resources }) {
                 src={resource.logo}
                 alt={resource.title}
                 target="_blank"
+                rel="noreferer noopener"
                 className="mx-auto inline-block h-20 w-auto flex-shrink-0 align-middle grayscale transition duration-300 ease-in-out hover:grayscale-0"
               />
             ) : (
