@@ -25,7 +25,7 @@ export function TrustedBy() {
       className="scroll-mt-14 py-20 sm:py-32"
     >
       <Container>
-        <h2 className="text-blue-900 mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter sm:text-5xl">
+        <h2 className=" mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter sm:text-5xl">
           Trusted by the best
         </h2>
         <div className="mx-auto mt-20 grid max-w-max grid-cols-2 place-content-center gap-y-12 gap-x-32 md:grid-cols-4 md:gap-x-16 lg:gap-x-32">
