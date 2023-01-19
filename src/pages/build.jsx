@@ -1,38 +1,72 @@
 import { Container } from '@/components/Container'
 import screenArwiki from '@/images/screenshot/build/arwiki.png'
-import screenArwiki2 from '@/images/screenshot/build/arwiki2.png'
+// import screenArwiki2 from '@/images/screenshot/build/arwiki2.png'
 import screenCookbook from '@/images/screenshot/build/cookbook.png'
-import screenList from '@/images/screenshot/build/arweavelist.png'
 import ResourceScreenList from '@/components/ResourceScreenList'
 import screenDiscord from '@/images/screenshot/build/discord.png'
+import screenUploadData from '@/images/screenshot/build/upload-data.png'
+import screenArweaveAsDb from '@/images/screenshot/build/arweave-as-db.png'
 
 const resources = [
-  {
-    title: 'Upload data to Arweave',
-    link: 'https://cookbook.arweave.dev/concepts/post-transactions.html',
-    screenshot: screenCookbook,
-  },
-  {
-    title: 'Build your first app',
-    link: 'https://arwiki.arweave.dev/#/en/creating-a-dapp',
-    screenshot: screenArwiki2,
-  },
-  {
-    title: 'Learn more',
-    link: 'https://arwiki.arweave.dev',
-    screenshot: screenArwiki,
-  },
-  {
-    title: 'See what others have built',
-    link: 'https://list.weavescan.com/',
-    screenshot: screenList,
-  },
-  {
-    title: 'Join the Discord',
-    link: 'https://discord.gg/4Y4W3ZJ',
-    screenshot: screenDiscord,
-  },
+  [
+    {
+      title: 'Upload your first data',
+      link: 'https://cookbook.arweave.dev/concepts/post-transactions.html',
+      screenshot: screenUploadData,
+    },
+    {
+      title: 'Build a fully decentralized app',
+      link: 'https://arwiki.arweave.dev/#/en/creating-a-dapp',
+      screenshot: screenArwiki,
+    },
+    {
+      title: 'Arweave as a database',
+      link: 'https://cookbook.arweave.dev/concepts/queryTransactions.html',
+      screenshot: screenArweaveAsDb,
+    },
+  ],
+  [
+    {
+      title: 'Explore the cookbook',
+      link: 'https://cookbook.arweave.dev',
+      screenshot: screenCookbook,
+    },
+    {
+      title: 'Understand the protocol',
+      link: 'https://arwiki.arweave.dev/#/en/Arweave',
+      screenshot: screenArwiki,
+    },
+    {
+      title: 'Join the developer Discord',
+      link: 'https://discord.gg/4Y4W3ZJ',
+      screenshot: screenDiscord,
+    },
+  ],
 ]
+
+// const resources = [
+//   {
+//     title: 'Upload data to Arweave',
+//     link: 'https://cookbook.arweave.dev/concepts/post-transactions.html',
+//     screenshot: screenCookbook,
+//   },
+//   {
+//     title: 'Build your first app',
+//     link: 'https://arwiki.arweave.dev/#/en/creating-a-dapp',
+//     screenshot: screenArwiki2,
+//   },
+//   {
+//     title: 'Learn more',
+//     link: 'https://arwiki.arweave.dev',
+//     screenshot: screenArwiki,
+//   },
+
+//   {
+//     title: 'Join the developer Discord',
+//     link: 'https://discord.gg/4Y4W3ZJ',
+//     screenshot: screenDiscord,
+//   },
+// ]
 
 export default function Use() {
   return (
@@ -58,8 +92,17 @@ export default function Use() {
             </div>
           </div>
 
+          <h2 className="pt-8 font-display text-3xl font-medium tracking-tighter sm:text-3xl">
+            Get Started.
+          </h2>
           <div className="mx-auto">
-            <ResourceScreenList resources={resources} />
+            <ResourceScreenList resources={resources[0]} />
+          </div>
+          <h2 className="pt-8 font-display text-3xl font-medium tracking-tighter sm:text-3xl">
+            Dive Deep.
+          </h2>
+          <div className="mx-auto sm:pb-20">
+            <ResourceScreenList resources={resources[1]} />
           </div>
         </Container>
       </section>

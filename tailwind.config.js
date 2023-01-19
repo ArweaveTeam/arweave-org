@@ -29,6 +29,8 @@ module.exports = {
         800: '#252f3f',
         900: '#161e2e',
       },
+      'orange': '#FF5F15',
+      'link': '#0b0080'
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],

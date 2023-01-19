@@ -3,7 +3,7 @@ import { Logo } from '@/components/Logo'
 
 export function Footer() {
   return (
-    <footer className="pt-40">
+    <footer className="mx-auto pt-40 sm:pb-20">
       <Container className="flex flex-col items-center justify-end lg:flex-row">
         <Logo className="text-slate-900 lg:hidden" up="up" />
         <Logo className="text-slate-900 hidden lg:block" />

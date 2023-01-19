@@ -4,10 +4,10 @@ import { Popover } from '@headlessui/react'
 import clsx from 'clsx'
 
 const sections = [
-  { id: '/', title: 'Home', icon: '🏠' },
-  { id: '/use', title: 'Use Arweave', icon: '👤' },
-  { id: '/build', title: 'Build on Arweave', icon: '</>' },
-  { id: '/funding', title: 'Get Funded', icon: '$' },
+  { id: '/', title: 'Discover.', icon: '🏠' },
+  { id: '/use', title: 'Use.', icon: '👤' },
+  { id: '/build', title: 'Build.', icon: '</>' },
+  { id: '/funding', title: 'Get Funded.', icon: '$' },
 ]
 
 function MenuIcon({ open, ...props }) {
@@ -114,7 +114,7 @@ export function NavBar({ currentPathname }) {
                 className={clsx(
                   'flex w-full flex-col items-center justify-center border-b-2 before:mb-2 before:font-mono before:text-sm before:content-[counter(section,decimal-leading-zero)]',
                   currentPathname === section.id
-                    ? 'border-gray-600 bg-gray-50 text-gray-600 before:text-gray-600'
+                    ? 'border-b-8 border-orange text-orange before:text-orange'
                     : 'border-transparent before:text-gray-500 hover:bg-gray-50/40 hover:before:text-gray-900'
                 )}
               >

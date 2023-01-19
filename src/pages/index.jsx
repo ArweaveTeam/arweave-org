@@ -5,7 +5,9 @@ export default function Home() {
     <>
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h1 className=" font-display text-5xl font-bold tracking-tighter sm:text-6xl">
-          Meet Arweave: Permanent information storage.
+          Meet Arweave:
+          <br />
+          Permanent information storage.
         </h1>
         <div className=" mt-6 space-y-6 font-sans text-2xl tracking-tight">
           <p>

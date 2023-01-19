@@ -10,11 +10,10 @@ import logoPermaventures from '@/images/logos/permaventures.png'
 import logoLongview from '@/images/logos/longview.png'
 
 const resources = [
-  // {
-  //   title: 'Permanent Ventures',
-  //   link: 'https://permanent.ventures/', // TODO: Validate this link is right
-  //   logo: logoPermaventures,
-  // },
+  {
+    title: 'Permanent Ventures',
+    link: 'https://twitter.com/permanentvc',
+  },
   {
     title: 'PermaDAO',
     link: 'https://permadao.notion.site/',
@@ -62,11 +61,6 @@ export default function Fund() {
             </h2>
             <div className="font-display text-2xl tracking-tight">
               <p class="mt-4">
-                Unlock funding and investment opportunities with Arweave.
-                Revolutionize the way you store and share data and be a part of
-                Arweave&apos;s vision of a decentralized future.
-              </p>
-              <p class="mt-4">
                 Arweave is a fully decentralized ecosystem. There are multiple
                 dedicated organizations – ranging from non-profits, to DAOs and
                 ventures studios – that back its development and help the
@@ -81,7 +75,7 @@ export default function Fund() {
             </div>
           </div>
 
-          <div className="mx-auto pt-20">
+          <div className="mx-auto pt-20 sm:pb-20">
             <ResourceList resources={resources} />
           </div>
         </Container>

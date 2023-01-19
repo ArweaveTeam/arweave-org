@@ -6,6 +6,7 @@ import screenPermapages from '@/images/screenshot/use/permapages.png'
 import screenPioneers from '@/images/screenshot/use/pioneers.png'
 import screenPermacast from '@/images/screenshot/use/permacast.png'
 import screenArweavenews from '@/images/screenshot/use/arweavenews.png'
+import screenList from '@/images/screenshot/use/arweavelists.png'
 import ResourceScreenList from '@/components/ResourceScreenList'
 
 const resources = [
@@ -30,6 +31,11 @@ const resources = [
   // Learn More
   [
     {
+      title: 'Check out the latest on Arweave.news',
+      link: 'https://arweave.news/',
+      screenshot: screenArweavenews,
+    },
+    {
       title: 'Podcast: Permaweb Pioneers',
       link: 'https://permaweb-pioneers.simplecast.com/',
       screenshot: screenPioneers,
@@ -40,9 +46,9 @@ const resources = [
       screenshot: screenPermacast,
     },
     {
-      title: 'Check out Arweave.news',
-      link: 'https://arweave.news/',
-      screenshot: screenArweavenews,
+      title: 'Explore the ecosystem',
+      link: 'https://list.weavescan.com/',
+      screenshot: screenList,
     },
   ],
 ]
@@ -71,13 +77,16 @@ export default function Use() {
             </div>
           </div>
 
-          <div className="mx-auto pt-5">
+          <h2 className="pt-8 font-display text-3xl font-medium tracking-tighter sm:text-3xl">
+            Get Started.
+          </h2>
+          <div className="mx-auto">
             <ResourceScreenList resources={resources[0]} />
           </div>
           <h2 className="pt-5 font-display text-3xl font-medium tracking-tighter sm:text-3xl">
-            Learn more
+            Dive Deep.
           </h2>
-          <div>
+          <div class="mx-auto">
             <ResourceScreenList resources={resources[1]} />
           </div>
         </Container>
