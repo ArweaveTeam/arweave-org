@@ -64,7 +64,7 @@ export default function Fund() {
               <p class="mt-4">
                 Unlock funding and investment opportunities with Arweave.
                 Revolutionize the way you store and share data and be a part of
-                Arweave's vision of a decentralized future.
+                Arweave&apos;s vision of a decentralized future.
               </p>
               <p class="mt-4">
                 Arweave is a fully decentralized ecosystem. There are multiple
