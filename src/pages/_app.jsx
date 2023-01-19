@@ -35,7 +35,7 @@ export default function App({ Component, pageProps, router }) {
       <Header />
       <main>
         <div className="relative pt-10 pb-20 sm:py-24">
-          <div className="bg-indigo-50 absolute inset-x-0 -top-48 -bottom-14 overflow-hidden">
+          <div className="absolute inset-x-0 -top-48 -bottom-14 overflow-hidden">
             <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white" />
             <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white" />
           </div>

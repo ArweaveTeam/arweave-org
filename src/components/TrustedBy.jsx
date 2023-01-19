@@ -33,7 +33,7 @@ export function TrustedBy() {
               <Image
                 src={trustee.logo}
                 alt={trustee.name}
-                className="grayscale transition duration-300 ease-in-out hover:grayscale-0"
+                className=" transition duration-300 ease-in-out "
                 unoptimized
               />
             </div>

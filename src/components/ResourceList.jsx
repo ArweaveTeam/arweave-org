@@ -20,7 +20,7 @@ export default function ResourceList({ resources }) {
               <Image
                 src={resource.logo}
                 alt={resource.title}
-                className="mx-auto inline-block h-20 w-auto flex-shrink-0 align-middle grayscale transition duration-300 ease-in-out hover:grayscale-0"
+                className="mx-auto inline-block h-20 w-auto flex-shrink-0 align-middle  transition duration-300 ease-in-out "
               />
             ) : (
               <h3 className="text-3xl font-medium text-gray-900">
