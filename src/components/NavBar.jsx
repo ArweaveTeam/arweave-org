@@ -4,9 +4,10 @@ import { Popover } from '@headlessui/react'
 import clsx from 'clsx'
 
 const sections = [
-  { id: 'use', title: 'Use Arweave', icon: '👤' },
-  { id: 'build', title: 'Build on Arweave', icon: '</>' },
-  { id: 'funding', title: 'Get Funded', icon: '$' },
+  { id: '/', title: 'Home', icon: '🏠' },
+  { id: '/use', title: 'Use Arweave', icon: '👤' },
+  { id: '/build', title: 'Build on Arweave', icon: '</>' },
+  { id: '/funding', title: 'Get Funded', icon: '$' },
 ]
 
 function MenuIcon({ open, ...props }) {
@@ -27,70 +28,37 @@ function MenuIcon({ open, ...props }) {
   )
 }
 
-export function NavBar() {
+export function NavBar({ currentPathname }) {
   let navBarRef = useRef()
-  let [activeIndex, setActiveIndex] = useState(null)
-  let mobileActiveIndex = activeIndex === null ? 0 : activeIndex
-
-  useEffect(() => {
-    function updateActiveIndex() {
-      let newActiveIndex = null
-      let elements = sections.map(({ id }) => document.getElementById(id))
-      let bodyRect = document.body.getBoundingClientRect()
-      let offset = bodyRect.top + navBarRef.current.offsetHeight + 1
-
-      if (window.scrollY >= Math.floor(bodyRect.height) - window.innerHeight) {
-        setActiveIndex(sections.length - 1)
-        return
-      }
-
-      for (let index = 0; index < elements.length; index++) {
-        if (
-          window.scrollY >=
-          elements[index].getBoundingClientRect().top - offset
-        ) {
-          newActiveIndex = index
-        } else {
-          break
-        }
-      }
-
-      setActiveIndex(newActiveIndex)
-    }
-
-    updateActiveIndex()
-
-    window.addEventListener('resize', updateActiveIndex)
-    window.addEventListener('scroll', updateActiveIndex, { passive: true })
-
-    return () => {
-      window.removeEventListener('resize', updateActiveIndex)
-      window.removeEventListener('scroll', updateActiveIndex, { passive: true })
-    }
-  }, [])
+  let miniMenuRef = useRef()
+  let [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div ref={navBarRef} className="sticky top-0 z-50">
-      <Popover className="sm:hidden">
+    <div
+      ref={navBarRef}
+      className={clsx(
+        'fixed bottom-0 right-0 left-0 z-50',
+        isOpen && ' bottom-28'
+      )}
+    >
+      <Popover className="sm:hidden" ref={miniMenuRef}>
         {({ open }) => (
           <>
             <div
               className={clsx(
-                'relative flex items-center py-3 px-4',
+                'relative flex items-center py-3 px-4 ',
                 !open &&
-                  'bg-white/95 shadow-sm [@supports(backdrop-filter:blur(0))]:bg-white/80 [@supports(backdrop-filter:blur(0))]:backdrop-blur'
+                  'bg-white/95 shadow-sm [@supports(backdrop-filter:blur(0))]:bg-white/80 [@supports(backdrop-filter:blur(0))]:backdrop-blur',
+                open && ' open'
               )}
             >
               {!open && (
                 <>
-                  <span
-                    aria-hidden="true"
-                    className="font-mono text-sm text-gray-600"
-                  >
-                    {sections[mobileActiveIndex].icon}
-                  </span>
                   <span className="ml-4 text-base font-medium text-gray-900">
-                    {sections[mobileActiveIndex].title}
+                    {
+                      sections.find((section) => section.id === currentPathname)
+                        .title
+                    }
                   </span>
                 </>
               )}
@@ -100,6 +68,9 @@ export function NavBar() {
                   open && 'relative z-10'
                 )}
                 aria-label="Toggle navigation menu"
+                onClick={() => {
+                  setIsOpen(!isOpen)
+                }}
               >
                 {!open && (
                   <>
@@ -111,19 +82,16 @@ export function NavBar() {
               </Popover.Button>
             </div>
             <Popover.Panel className="absolute inset-x-0 top-0 bg-white/95 py-3.5 shadow-sm [@supports(backdrop-filter:blur(0))]:bg-white/80 [@supports(backdrop-filter:blur(0))]:backdrop-blur">
-              {sections.map((section, sectionIndex) => (
+              {sections.map((section) => (
                 <Popover.Button
                   as={Link}
                   key={section.id}
-                  href={`#${section.id}`}
+                  href={`${section.id}`}
                   className="flex items-center py-1.5 px-4"
+                  onClick={() => {
+                    setIsOpen(!isOpen)
+                  }}
                 >
-                  <span
-                    aria-hidden="true"
-                    className="font-mono text-sm text-gray-600"
-                  >
-                    {section.icon}
-                  </span>
                   <span className="ml-4 text-base font-medium text-gray-900">
                     {section.title}
                   </span>
@@ -139,13 +107,13 @@ export function NavBar() {
           role="list"
           className="mb-[-2px] grid auto-cols-[minmax(0,15rem)] grid-flow-col text-2xl font-medium text-gray-900 [counter-reset:section]"
         >
-          {sections.map((section, sectionIndex) => (
+          {sections.map((section) => (
             <li key={section.id} className="flex [counter-increment:section]">
               <Link
-                href={`#${section.id}`}
+                href={`${section.id}`}
                 className={clsx(
                   'flex w-full flex-col items-center justify-center border-b-2 before:mb-2 before:font-mono before:text-sm before:content-[counter(section,decimal-leading-zero)]',
-                  sectionIndex === activeIndex
+                  currentPathname === section.id
                     ? 'border-gray-600 bg-gray-50 text-gray-600 before:text-gray-600'
                     : 'border-transparent before:text-gray-500 hover:bg-gray-50/40 hover:before:text-gray-900'
                 )}
