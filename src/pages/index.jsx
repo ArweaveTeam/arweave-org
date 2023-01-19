@@ -3,7 +3,7 @@ import { Footer } from '@/components/Footer'
 export default function Home() {
   return (
     <>
-      <div className="mx-auto max-w-2xl lg:max-w-4xl lg:px-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
         <h1 className="text-blue-600 font-display text-5xl font-bold tracking-tighter sm:text-6xl">
           <span className="sr-only">Arweave - </span>Arweave is permanent
           information storage.
