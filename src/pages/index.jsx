@@ -3,29 +3,28 @@ import { Footer } from '@/components/Footer'
 export default function Home() {
   return (
     <>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h1 className="text-blue-600 font-display text-5xl font-bold tracking-tighter sm:text-6xl">
-          <span className="sr-only">Arweave - </span>Arweave is permanent
-          information storage.
+          Meet Arweave: Permanent information storage.
         </h1>
         <div className="text-blue-900 mt-6 space-y-6 font-sans text-2xl tracking-tight">
           <p>
-            Arweave is an open source protocol that allows you to permanently
-            store everything from personal files, artifacts of history, to fully
-            fledged decentralized web applications.
+            The Arweave network is like Bitcoin, but for data: An entire web
+            inside a decentralized, provably neutral and open ledger.
           </p>
-
           <p>
-            All data stored on Arweave is composable, queryable and remixable.
-            This enables the creation of a radically different form of web: the
-            Permaweb.
+            Not only does the Arweave network permanently store all of
+            humanity’s important digital artifacts, but it can even be used to
+            host fully decentralized and provably neutral web apps.
           </p>
-
           <p>
-            Arweave is not a typical “crypto project”. Our protocol does not
-            have a team, instead it is powered by a fully decentralized
-            ecosystem. The protocol is complete, mature and widely adopted.
-            Anyone can evolve the Arweave protocol in a permissionless way.
+            The Arweave protocol is complete, mature and widely adopted. As
+            such, its ecosystem is fully decentralized. This site is just the
+            tip of the iceberg. It acts as a map that points you to places you
+            can use, learn about, and build on Arweave.
+          </p>
+          <p>
+            Dive in! The rabbit hole is deep, and the possibilities are endless.
           </p>
         </div>
       </div>

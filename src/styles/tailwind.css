@@ -7,7 +7,7 @@ div.resources {
 }
 
 a.resource {
-  @apply  flex-auto px-2 text-center align-middle  font-mono transition duration-300 ease-in-out;
+  @apply flex-auto px-2 text-center align-middle  font-mono transition duration-300 ease-in-out;
 }
 
 a.resource > img {

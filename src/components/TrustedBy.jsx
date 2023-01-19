@@ -7,10 +7,14 @@ import logoMirror from '@/images/trustedby/mirror.png'
 import logoInstagram from '@/images/trustedby/instagram.png'
 
 const trustedby = [
-  { name: 'Meta', logo: logoMeta },
-  { name: 'Metaplex', logo: logoMetaplex },
-  { name: 'Mirror', logo: logoMirror },
-  { name: 'Instagram', logo: logoInstagram },
+  { name: 'Meta', logo: logoMeta, link: 'https://www.meta.com/' },
+  { name: 'Metaplex', logo: logoMetaplex, link: 'https://www.metaplex.com/' },
+  { name: 'Mirror', logo: logoMirror, link: 'https://mirror.xyz/' },
+  {
+    name: 'Instagram',
+    logo: logoInstagram,
+    link: 'https://www.instagram.com/',
+  },
 ]
 
 export function TrustedBy() {
@@ -26,7 +30,10 @@ export function TrustedBy() {
         </h2>
         <div className="mx-auto mt-20 grid max-w-max grid-cols-2 place-content-center gap-y-12 gap-x-32 md:grid-cols-4 md:gap-x-16 lg:gap-x-32">
           {trustedby.map((trustee) => (
-            <div
+            <a
+              href={trustee.link}
+              target="_blank"
+              rel="noreferrer"
               key={trustee.name}
               className="flex items-center justify-center"
             >
@@ -36,7 +43,7 @@ export function TrustedBy() {
                 className=" transition duration-300 ease-in-out "
                 unoptimized
               />
-            </div>
+            </a>
           ))}
         </div>
       </Container>

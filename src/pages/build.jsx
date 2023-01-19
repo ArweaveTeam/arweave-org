@@ -1,58 +1,37 @@
 import { Container } from '@/components/Container'
 import screenArwiki from '@/images/screenshot/build/arwiki.png'
+import screenArwiki2 from '@/images/screenshot/build/arwiki2.png'
 import screenCookbook from '@/images/screenshot/build/cookbook.png'
-import screenWarp from '@/images/screenshot/build/warp.png'
-import screenExm from '@/images/screenshot/build/exm.png'
-import screenWeavedb from '@/images/screenshot/build/weavedb.png'
-import screenArdb from '@/images/screenshot/build/ardb.jpg'
-import screenKwil from '@/images/screenshot/build/kwil.png'
+import screenList from '@/images/screenshot/build/arweavelist.png'
 import ResourceScreenList from '@/components/ResourceScreenList'
+import screenDiscord from '@/images/screenshot/build/discord.png'
 
 const resources = [
-  // Tutorials
-  [
-    {
-      title: 'Down the rabbit hole',
-      link: 'https://arwiki.wiki/',
-      screenshot: screenArwiki,
-    },
-    {
-      title: 'Build apps on Arweave',
-      link: 'https://cookbook.arweave.dev/',
-      screenshot: screenCookbook,
-    },
-  ],
-  // SmartWeave Contracts
-  [
-    {
-      title: 'Warp',
-      link: 'https://warp.cc/',
-      screenshot: screenWarp,
-    },
-    {
-      title: 'EXM',
-      link: 'https://exm.dev/',
-      screenshot: screenExm,
-    },
-  ],
-  // Use AR as a Database
-  [
-    {
-      title: 'WeaveDB',
-      link: 'https://weavedb.dev/',
-      screenshot: screenWeavedb,
-    },
-    {
-      title: 'ArDB',
-      link: 'https://github.com/textury/ardb',
-      screenshot: screenArdb,
-    },
-    {
-      title: 'Kwil',
-      link: 'https://www.kwil.com/',
-      screenshot: screenKwil,
-    },
-  ],
+  {
+    title: 'Upload data to Arweave',
+    link: 'https://cookbook.arweave.dev/concepts/post-transactions.html',
+    screenshot: screenCookbook,
+  },
+  {
+    title: 'Build your first app',
+    link: 'https://arwiki.arweave.dev/#/en/creating-a-dapp',
+    screenshot: screenArwiki2,
+  },
+  {
+    title: 'Learn more',
+    link: 'https://arwiki.arweave.dev',
+    screenshot: screenArwiki,
+  },
+  {
+    title: 'See what others have built',
+    link: 'https://list.weavescan.com/',
+    screenshot: screenList,
+  },
+  {
+    title: 'Join the Discord',
+    link: 'https://discord.gg/4Y4W3ZJ',
+    screenshot: screenDiscord,
+  },
 ]
 
 export default function Use() {
@@ -60,39 +39,27 @@ export default function Use() {
     <>
       <section id="build" aria-label="Build on Arweave">
         <Container className="relative z-10">
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl lg:pr-24">
-            <h2 className="text-blue-600 font-display text-4xl font-medium tracking-tighter sm:text-5xl">
+          <div className="mx-auto lg:mx-0 lg:pr-24">
+            <h2 className="font-display text-4xl font-medium tracking-tighter sm:text-5xl">
               Build on Arweave
             </h2>
-            <p className="text-blue-900 mt-4 font-display text-2xl tracking-tight">
-              Experience the power of decentralized data storage with Arweave.
-              Browse and discover the benefits of using a permanent,
-              tamper-proof, and censor-free data storage solution.
-            </p>
-            <p className="pt-5">
-              <a
-                href="https://discord.gg/AhsZfBm"
-                className="text-link"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Join our Developer Discord
-              </a>
-            </p>
+            <div className="font-display text-2xl tracking-tight">
+              <p className="mt-4">
+                Arweave allows you to add permanent storage to your app simply –
+                or even make your apps themselves fully permanent and
+                decentralized.
+              </p>
+              <p className="mt-4">
+                The permaweb ecosystem, built by our community on top of
+                Arweave, offers everything from hosting of your UI, to
+                decentralized database querying, all the way to a decentralized
+                name service.
+              </p>
+            </div>
           </div>
 
           <div className="mx-auto">
-            <ResourceScreenList resources={resources[0]} />
-
-            <h2 className="text-blue-600 pt-5 font-display text-3xl font-medium tracking-tighter sm:text-3xl">
-              SmartWeave Contracts
-            </h2>
-            <ResourceScreenList resources={resources[1]} />
-
-            <h2 className="text-blue-600 pt-5 font-display text-3xl font-medium tracking-tighter sm:text-3xl">
-              Use Arweave as a Database
-            </h2>
-            <ResourceScreenList resources={resources[2]} />
+            <ResourceScreenList resources={resources} />
           </div>
         </Container>
       </section>

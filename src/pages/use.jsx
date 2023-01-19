@@ -46,21 +46,29 @@ export default function Use() {
     <>
       <section id="use" aria-label="Use Arweave">
         <Container className="relative z-10">
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl lg:pr-24">
-            <h2 className="text-blue-600 font-display text-4xl font-medium tracking-tighter sm:text-5xl">
+          <div className="mx-auto lg:mx-0 lg:pr-24">
+            <h2 className="font-display text-4xl font-medium tracking-tighter sm:text-5xl">
               Use Arweave
             </h2>
-            <p className="text-blue-900 mt-4 font-display text-2xl tracking-tight">
-              Experience the power of decentralized data storage with Arweave.
-              Browse and discover the benefits of using a permanent,
-              tamper-proof, and censor-free data storage solution.
-            </p>
+            <div className="mt-4 font-display text-2xl tracking-tight">
+              <p className="mt-4">
+                Experience the power of permanent data storage with Arweave.
+              </p>
+              <p class="mt-4">
+                Arweave is a protocol that enables developers to build
+                applications with the power of permanent data storage. As such
+                there are a million different ways to use it – from social media
+                apps that provably respect your rights, to applications that
+                help you secure your most valuable documents. Check out some of
+                these apps, explore the ecosystem, and learn more!
+              </p>
+            </div>
           </div>
 
           <div className="mx-auto pt-5">
             <ResourceScreenList resources={resources[0]} />
           </div>
-          <h2 className="text-blue-600 pt-5 font-display text-3xl font-medium tracking-tighter sm:text-3xl">
+          <h2 className="pt-5 font-display text-3xl font-medium tracking-tighter sm:text-3xl">
             Learn more
           </h2>
           <div>
