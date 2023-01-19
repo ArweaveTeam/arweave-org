@@ -4,6 +4,7 @@ import screenArweave101 from '@/images/screenshot/use/arweave101.png'
 import screenAkord from '@/images/screenshot/use/akord.png'
 import screenPermapages from '@/images/screenshot/use/permapages.png'
 import screenPioneers from '@/images/screenshot/use/pioneers.png'
+import screenPermacast from '@/images/screenshot/use/permacast.png'
 import screenArweavenews from '@/images/screenshot/use/arweavenews.png'
 import ResourceScreenList from '@/components/ResourceScreenList'
 
@@ -32,6 +33,11 @@ const resources = [
       title: 'Podcast: Permaweb Pioneers',
       link: 'https://permaweb-pioneers.simplecast.com/',
       screenshot: screenPioneers,
+    },
+    {
+      title: 'Podcast: Permacast',
+      link: 'https://legacy.permacast.dev/#/podcasts/rBIQpWeYcf0_reltNXTKjjEUHlQRL9CmZCNcgYjZaao',
+      screenshot: screenPermacast,
     },
     {
       title: 'Check out Arweave.news',
