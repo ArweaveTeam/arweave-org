@@ -7,6 +7,7 @@ import screenPioneers from '@/images/screenshot/use/pioneers.png'
 import screenPermacast from '@/images/screenshot/use/permacast.png'
 import screenArweavenews from '@/images/screenshot/use/arweavenews.png'
 import screenList from '@/images/screenshot/use/arweavelists.png'
+import screenAcceleratear from '@/images/screenshot/use/acceleratear.png'
 import ResourceScreenList from '@/components/ResourceScreenList'
 
 const resources = [
@@ -18,14 +19,19 @@ const resources = [
       screenshot: screenArweave101,
     },
     {
-      title: 'Upload a file forever',
+      title: 'Save a file forever',
       link: 'https://akord.com/',
       screenshot: screenAkord,
     },
     {
-      title: 'Claim your homepage on the Permaweb',
+      title: 'Grab your homepage on the Permaweb',
       link: 'https://permapages.app/',
       screenshot: screenPermapages,
+    },
+    {
+      title: 'Arweave for Enterprise',
+      link: 'https://acceleratear.co/',
+      screenshot: screenAcceleratear,
     },
   ],
   // Learn More
@@ -62,11 +68,11 @@ export default function Use() {
             <h2 className="font-display text-4xl font-medium tracking-tighter sm:text-5xl">
               Use Arweave
             </h2>
-            <div className="mt-4 font-display text-2xl tracking-tight">
+            <div className="mt-4 font-display text-xl tracking-tight">
               <p className="mt-4">
                 Experience the power of permanent data storage with Arweave.
               </p>
-              <p class="mt-4">
+              <p className="mt-4">
                 Arweave is a protocol that enables developers to build
                 applications with the power of permanent data storage. As such
                 there are a million different ways to use it – from social media
@@ -86,7 +92,7 @@ export default function Use() {
           <h2 className="pt-5 font-display text-3xl font-medium tracking-tighter sm:text-3xl">
             Dive Deep.
           </h2>
-          <div class="mx-auto">
+          <div className="mx-auto">
             <ResourceScreenList resources={resources[1]} />
           </div>
         </Container>

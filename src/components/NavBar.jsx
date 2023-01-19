@@ -46,7 +46,7 @@ export function NavBar({ currentPathname }) {
           <>
             <div
               className={clsx(
-                'relative flex items-center py-3 px-4 ',
+                'relative flex items-center py-3 px-4',
                 !open &&
                   'bg-white/95 shadow-sm [@supports(backdrop-filter:blur(0))]:bg-white/80 [@supports(backdrop-filter:blur(0))]:backdrop-blur',
                 open && ' open'
@@ -54,7 +54,7 @@ export function NavBar({ currentPathname }) {
             >
               {!open && (
                 <>
-                  <span className="ml-4 text-base font-medium text-gray-900">
+                  <span className="ml-4 text-base font-medium text-orange underline">
                     {
                       sections.find((section) => section.id === currentPathname)
                         .title
@@ -92,7 +92,14 @@ export function NavBar({ currentPathname }) {
                     setIsOpen(!isOpen)
                   }}
                 >
-                  <span className="ml-4 text-base font-medium text-gray-900">
+                  <span
+                    className={clsx(
+                      'ml-4 text-base font-medium ',
+                      currentPathname === section.id
+                        ? 'text-orange underline'
+                        : 'text-gray-900'
+                    )}
+                  >
                     {section.title}
                   </span>
                 </Popover.Button>
@@ -115,7 +122,7 @@ export function NavBar({ currentPathname }) {
                   'flex w-full flex-col items-center justify-center border-b-2 before:mb-2 before:font-mono before:text-sm before:content-[counter(section,decimal-leading-zero)]',
                   currentPathname === section.id
                     ? 'border-b-8 border-orange text-orange before:text-orange'
-                    : 'border-transparent before:text-gray-500 hover:bg-gray-50/40 hover:before:text-gray-900'
+                    : 'border-transparent before:text-gray-500 hover:bg-gray-50/40 hover:text-orange hover:before:text-orange'
                 )}
               >
                 {section.title}

@@ -1,11 +1,12 @@
 import { Container } from '@/components/Container'
 import screenArwiki from '@/images/screenshot/build/arwiki.png'
-// import screenArwiki2 from '@/images/screenshot/build/arwiki2.png'
 import screenCookbook from '@/images/screenshot/build/cookbook.png'
 import ResourceScreenList from '@/components/ResourceScreenList'
 import screenDiscord from '@/images/screenshot/build/discord.png'
-import screenUploadData from '@/images/screenshot/build/upload-data.png'
+import screenUploadData from '@/images/screenshot/build/upload-data2.png'
 import screenArweaveAsDb from '@/images/screenshot/build/arweave-as-db.png'
+import screenWarp from '@/images/screenshot/build/warp.png'
+import screenFullstack from '@/images/screenshot/build/fullstack.png'
 
 const resources = [
   [
@@ -20,12 +21,22 @@ const resources = [
       screenshot: screenArwiki,
     },
     {
-      title: 'Arweave as a database',
+      title: 'Use Arweave as a database',
       link: 'https://cookbook.arweave.dev/concepts/queryTransactions.html',
       screenshot: screenArweaveAsDb,
     },
+    {
+      title: 'Launch Smart Contracts on Arweave',
+      link: 'https://warp.cc/',
+      screenshot: screenWarp,
+    },
   ],
   [
+    {
+      title: 'Arweave+SmartWeave App Development Workshop',
+      link: 'https://www.youtube.com/watch?v=cGLMN5A2C4E',
+      screenshot: screenFullstack,
+    },
     {
       title: 'Explore the cookbook',
       link: 'https://cookbook.arweave.dev',
@@ -38,7 +49,7 @@ const resources = [
     },
     {
       title: 'Join the developer Discord',
-      link: 'https://discord.gg/4Y4W3ZJ',
+      link: 'https://discord.gg/AhsZfBm',
       screenshot: screenDiscord,
     },
   ],
@@ -77,7 +88,7 @@ export default function Use() {
             <h2 className="font-display text-4xl font-medium tracking-tighter sm:text-5xl">
               Build on Arweave
             </h2>
-            <div className="font-display text-2xl tracking-tight">
+            <div className="font-display text-xl tracking-tight">
               <p className="mt-4">
                 Arweave allows you to add permanent storage to your app simply –
                 or even make your apps themselves fully permanent and

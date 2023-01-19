@@ -8,7 +8,7 @@ export default function ResourceList({ resources }) {
     >
       {resources.map((resource) => (
         <a
-          key={resource.name}
+          key={resource.link}
           href={resource.link}
           target="_blank"
           rel="noreferrer"
@@ -20,10 +20,10 @@ export default function ResourceList({ resources }) {
               <Image
                 src={resource.logo}
                 alt={resource.title}
-                className="mx-auto inline-block h-20 w-auto flex-shrink-0 align-middle  transition duration-300 ease-in-out "
+                className="duration-50 mx-auto inline-block h-20 w-auto flex-shrink-0 border-b-2 border-transparent align-middle transition ease-in-out hover:border-spacing-2 hover:border-orange"
               />
             ) : (
-              <h3 className="text-3xl font-medium text-gray-900">
+              <h3 className="duration-50 border-b-2 border-transparent  text-3xl font-medium text-gray-900 transition hover:border-spacing-2 hover:border-orange">
                 {resource.title}
               </h3>
             )}

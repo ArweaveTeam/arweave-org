@@ -13,6 +13,7 @@ const resources = [
   {
     title: 'Permanent Ventures',
     link: 'https://twitter.com/permanentvc',
+    logo: logoPermaventures,
   },
   {
     title: 'PermaDAO',
@@ -59,8 +60,8 @@ export default function Fund() {
             <h2 className="font-display text-4xl font-medium tracking-tighter sm:text-5xl">
               Get Funded
             </h2>
-            <div className="font-display text-2xl tracking-tight">
-              <p class="mt-4">
+            <div className="font-display text-xl tracking-tight">
+              <p className="mt-4">
                 Arweave is a fully decentralized ecosystem. There are multiple
                 dedicated organizations – ranging from non-profits, to DAOs and
                 ventures studios – that back its development and help the
@@ -68,7 +69,7 @@ export default function Fund() {
                 investment opportunities available for those building on or
                 contributing to Arweave.
               </p>
-              <p class="mt-4">
+              <p className="mt-4">
                 Thinking of building a project on Arweave? Start building, reach
                 out and get funded!
               </p>
