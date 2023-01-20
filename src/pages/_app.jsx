@@ -5,9 +5,9 @@ import 'focus-visible'
 import '@/styles/tailwind.css'
 import { useEffect, useRef } from 'react'
 import { Header } from '@/components/Header'
-
 import { Container } from '@/components/Container'
 import { NavBar } from '@/components/NavBar'
+import CookieBanner from '@/components/CookieBanner'
 
 function usePrevious(value) {
   let ref = useRef()
@@ -40,6 +40,7 @@ export default function App({ Component, pageProps, router }) {
             <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white" />
           </div>
           <Container className="relative">
+            <CookieBanner />
             <Component previousPathname={previousPathname} {...pageProps} />
             <NavBar currentPathname={router.pathname} />
           </Container>
