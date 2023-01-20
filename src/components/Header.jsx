@@ -1,4 +1,5 @@
 import { Button } from '@/components/Button'
+import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { DiamondIcon } from '@/components/DiamondIcon'
 import { Logo } from '@/components/Logo'
@@ -8,9 +9,9 @@ export function Header() {
     <header className="relative z-50 lg:pt-4">
       <Container className="flex flex-wrap items-center justify-center sm:justify-between lg:flex-nowrap">
         <div className="mt-10 xl:mt-10 lg:mt-0 lg:grow lg:basis-0">
-          <a href="/">
+          <Link href="/">
             <Logo className="text-slate-900 h-12 w-auto xl:px-20" up="up" />
-          </a>
+          </Link>
         </div>
         {/* <div className="/10  order-first -mx-4 flex flex-auto basis-full overflow-x-auto whitespace-nowrap border-b py-4 font-mono text-sm sm:-mx-6 lg:order-none lg:mx-0 lg:basis-auto lg:border-0 lg:py-0">
           <div className="mx-auto flex items-center gap-4 px-4">
