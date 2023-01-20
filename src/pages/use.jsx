@@ -24,7 +24,7 @@ const resources = [
       screenshot: screenAkord,
     },
     {
-      title: 'Grab your homepage on the Permaweb',
+      title: 'Make your homepage on the Permaweb',
       link: 'https://permapages.app/',
       screenshot: screenPermapages,
     },
@@ -70,15 +70,10 @@ export default function Use() {
             </h2>
             <div className="mt-4 font-display text-xl tracking-tight">
               <p className="mt-4">
-                Experience the power of permanent data storage with Arweave.
-              </p>
-              <p className="mt-4">
-                Arweave is a protocol that enables developers to build
-                applications with the power of permanent data storage. As such
-                there are a million different ways to use it – from social media
-                apps that provably respect your rights, to applications that
-                help you secure your most valuable documents. Check out some of
-                these apps, explore the ecosystem, and learn more!
+                Arweave is a protocol that developers can use in many different
+                ways. Jump in and try the power of permanent data storage by
+                uploading a file, making your own homepage on the permaweb or
+                simply learning more about Arweave and its ecosystem.
               </p>
             </div>
           </div>

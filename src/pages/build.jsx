@@ -56,30 +56,6 @@ const resources = [
   ],
 ]
 
-// const resources = [
-//   {
-//     title: 'Upload data to Arweave',
-//     link: 'https://cookbook.arweave.dev/concepts/post-transactions.html',
-//     screenshot: screenCookbook,
-//   },
-//   {
-//     title: 'Build your first app',
-//     link: 'https://arwiki.arweave.dev/#/en/creating-a-dapp',
-//     screenshot: screenArwiki2,
-//   },
-//   {
-//     title: 'Learn more',
-//     link: 'https://arwiki.arweave.dev',
-//     screenshot: screenArwiki,
-//   },
-
-//   {
-//     title: 'Join the developer Discord',
-//     link: 'https://discord.gg/4Y4W3ZJ',
-//     screenshot: screenDiscord,
-//   },
-// ]
-
 export default function Use() {
   return (
     <>
@@ -91,15 +67,17 @@ export default function Use() {
             </h2>
             <div className="font-display text-xl tracking-tight">
               <p className="mt-4">
-                Arweave allows you to add permanent storage to your app simply –
-                or even make your apps themselves fully permanent and
-                decentralized.
+                Arweave lets you build quickly and simply with permanent
+                storage. You can store anything from files to fully
+                decentralized web applications.
               </p>
               <p className="mt-4">
-                The permaweb ecosystem, built by our community on top of
-                Arweave, offers everything from hosting of your UI, to
-                decentralized database querying, all the way to a decentralized
-                name service.
+                The permaweb ecosystem is a full stack for building
+                decentralized web applications on Arweave. It offers everything
+                from hosting of your web apps UI, to database querying, and
+                domain name services – all completely decentralized. This lets
+                you build web apps with the properties of blockchains:
+                permanent, provably neutral and transparent.
               </p>
             </div>
           </div>

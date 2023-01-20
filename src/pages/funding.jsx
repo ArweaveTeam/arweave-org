@@ -62,7 +62,7 @@ export default function Fund() {
             </h2>
             <div className="font-display text-xl tracking-tight">
               <p className="mt-4">
-                Arweave is a fully decentralized ecosystem. There are multiple
+                Arweave is a fully decentralized ecosystem. There are numerous
                 dedicated organizations – ranging from non-profits, to DAOs and
                 ventures studios – that back its development and help the
                 ecosystem grow. Many of these organizations have grant and
@@ -71,7 +71,7 @@ export default function Fund() {
               </p>
               <p className="mt-4">
                 Thinking of building a project on Arweave? Start building, reach
-                out and get funded!
+                out, get funded!
               </p>
             </div>
           </div>

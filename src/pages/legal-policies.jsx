@@ -227,9 +227,10 @@ function hashCode(str) {
 
 function toHtml(item, subItem = 0) {
   return (
-    <div 
-    key={hashCode(item.title)}
-    className={clsx('my-6', subItem === 0 ? 'mb-16' : '')}>
+    <div
+      key={hashCode(item.title)}
+      className={clsx('my-6', subItem === 0 ? 'mb-16' : '')}
+    >
       <h2
         className={clsx(
           'mb-4 font-bold',
