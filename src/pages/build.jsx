@@ -83,9 +83,9 @@ export default function Use() {
   return (
     <>
       <section id="build" aria-label="Build on Arweave">
-        <Container className="relative z-10 xl:px-20">
+        <Container className="relative z-10 ">
           <div className="mx-auto lg:mx-0 lg:pr-24">
-            <h2 className="font-display text-4xl font-medium tracking-tighter sm:text-5xl xl:pt-20">
+            <h2 className="font-display text-4xl font-medium tracking-tighter sm:text-5xl ">
               Build on Arweave
             </h2>
             <div className="font-display text-xl tracking-tight">

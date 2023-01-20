@@ -4,12 +4,12 @@ export default function Home() {
   return (
     <>
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h1 className=" font-display text-5xl xl:pt-20 xl:px-10 font-medium tracking-tighter sm:text-6xl">
+        <h1 className=" font-display text-5xl   font-medium tracking-tighter sm:text-6xl">
           Meet Arweave:
           <br />
           Permanent information storage.
         </h1>
-        <div className="mt-10 xl:mt-20 xl:px-10 space-y-6 font-sans text-xl tracking-tight xl:space-y-10">
+        <div className="mt-10   space-y-6 font-sans text-xl tracking-tight xl:space-y-10">
           <p>
             The Arweave network is like Bitcoin, but for data: An entire web
             inside a decentralized, provably neutral and open ledger.
