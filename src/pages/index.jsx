@@ -16,7 +16,7 @@ export default function Home() {
           </p>
           <p className="pt-4">
             Permanent storage has many applications: from the preservation of
-            humanity's most important data, to the hosting of truly
+            humanity&apos;s most important data, to the hosting of truly
             decentralized and provably neutral web apps.
           </p>
           <p className="pt-4">
