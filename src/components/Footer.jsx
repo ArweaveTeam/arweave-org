@@ -1,5 +1,6 @@
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
+import Link from 'next/link'
 
 export function Footer() {
   return (
@@ -7,13 +8,13 @@ export function Footer() {
       <Container className="flex flex-col items-center justify-start lg:flex-row">
         <p className="text-slate-500 mt-6 text-base lg:mt-0">
           &copy; MIT License 2023. Got something to add?{' '}
-          <a href="#!" className="underline">
+          <a href="#!" target="_blank" rel="noreferrer" className="underline">
             Send a PR.
           </a>{' '}
           |{' '}
-          <a href="#!" className="underline">
-            Legal.
-          </a>
+          <Link href="/legal-policies" className="underline">
+            Legal policies.
+          </Link>
         </p>
       </Container>
     </footer>
