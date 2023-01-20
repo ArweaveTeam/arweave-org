@@ -1,5 +1,6 @@
 import { Container } from '@/components/Container'
 import screenArwiki from '@/images/screenshot/build/arwiki.png'
+import screenArwiki2 from '@/images/screenshot/build/arwiki2.png'
 import screenCookbook from '@/images/screenshot/build/cookbook.png'
 import ResourceScreenList from '@/components/ResourceScreenList'
 import screenDiscord from '@/images/screenshot/build/discord.png'
@@ -18,7 +19,7 @@ const resources = [
     {
       title: 'Build a fully decentralized app',
       link: 'https://arwiki.arweave.dev/#/en/creating-a-dapp',
-      screenshot: screenArwiki,
+      screenshot: screenArwiki2,
     },
     {
       title: 'Use Arweave as a database',
