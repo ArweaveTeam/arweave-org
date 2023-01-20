@@ -23,7 +23,7 @@ export default function ResourceList({ resources }) {
                 className="duration-50 mx-auto inline-block h-20 w-auto flex-shrink-0 border-b-2 border-transparent align-middle transition ease-in-out hover:border-spacing-2 hover:border-orange"
               />
             ) : (
-              <h3 className="duration-50 border-b-2 border-transparent  text-3xl font-medium text-gray-900 transition hover:border-spacing-2 hover:border-orange">
+              <h3 className="duration-50 border-b-2 border-transparent  text-3xl  text-gray-900 transition hover:border-spacing-2 hover:border-orange">
                 {resource.title}
               </h3>
             )}

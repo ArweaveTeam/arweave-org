@@ -29,7 +29,7 @@ export function TrustedBy() {
       className="scroll-mt-14 pt-10 sm:pt-10 sm:pb-20"
     >
       <Container>
-        <h2 className="pt-8 font-display text-3xl font-medium tracking-tighter sm:text-3xl">
+        <h2 className="pt-8 font-display text-3xl  tracking-tighter sm:text-3xl">
           Trusted by the best.
         </h2>
         <div className="mx-auto mt-10 grid max-w-max grid-cols-2 place-content-center gap-y-12 gap-x-32 md:grid-cols-4 md:gap-x-16 lg:gap-x-32">

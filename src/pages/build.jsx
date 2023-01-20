@@ -62,7 +62,7 @@ export default function Use() {
       <section id="build" aria-label="Build on Arweave">
         <Container className="relative z-10 ">
           <div className="mx-auto lg:mx-0 lg:pr-24">
-            <h2 className="font-display text-4xl font-medium tracking-tighter sm:text-5xl ">
+            <h2 className="font-display text-4xl  tracking-tighter sm:text-5xl ">
               Build on Arweave
             </h2>
             <div className="font-display text-xl tracking-tight">
@@ -82,13 +82,13 @@ export default function Use() {
             </div>
           </div>
 
-          <h2 className="pt-8 font-display text-3xl font-medium tracking-tighter sm:text-3xl">
+          <h2 className="pt-8 font-display text-3xl  tracking-tighter sm:text-3xl">
             Get Started.
           </h2>
           <div className="mx-auto">
             <ResourceScreenList resources={resources[0]} />
           </div>
-          <h2 className="pt-8 font-display text-3xl font-medium tracking-tighter sm:text-3xl">
+          <h2 className="pt-8 font-display text-3xl  tracking-tighter sm:text-3xl">
             Dive Deep.
           </h2>
           <div className="mx-auto sm:pb-20">

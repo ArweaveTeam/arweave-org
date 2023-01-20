@@ -57,7 +57,7 @@ export default function Fund() {
       <section id="fund" aria-label="Get Funded">
         <Container className="relative z-10 ">
           <div className="mx-auto lg:mx-0 lg:pr-24">
-            <h2 className="font-display text-4xl font-medium tracking-tighter sm:text-5xl ">
+            <h2 className="font-display text-4xl  tracking-tighter sm:text-5xl ">
               Get Funded
             </h2>
             <div className="font-display text-xl tracking-tight">

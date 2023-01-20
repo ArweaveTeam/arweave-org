@@ -14,7 +14,7 @@ export default function ResourceScreenList({ resources }) {
           rel="noreferrer"
           className="col-span-1 flex flex-col text-center transition duration-300 ease-in-out"
         >
-          <div className="flex flex-1 flex-col pt-8 align-middle font-medium hover:text-link hover:underline">
+          <div className="flex flex-1 flex-col pt-8 align-middle  hover:text-link hover:underline">
             {/* If resource.logo, show the logo, otherwise show the name */}
             {resource.screenshot ? (
               <>
