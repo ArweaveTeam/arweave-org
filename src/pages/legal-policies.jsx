@@ -216,9 +216,20 @@ London, EC1A 2BN, United Kingdom.`,
   },
 ]
 
+// create hash from string to use as key
+function hashCode(str) {
+  let hash = 0
+  for (let i = 0; i < str.length; i++) {
+    hash = str.charCodeAt(i) + ((hash << 5) - hash)
+  }
+  return hash
+}
+
 function toHtml(item, subItem = 0) {
   return (
-    <div className={clsx('my-6', subItem === 0 ? 'mb-16' : '')}>
+    <div 
+    key={hashCode(item.title)}
+    className={clsx('my-6', subItem === 0 ? 'mb-16' : '')}>
       <h2
         className={clsx(
           'mb-4 font-bold',
@@ -230,6 +241,7 @@ function toHtml(item, subItem = 0) {
         if (typeof content === 'string') {
           return (
             <p
+              key={hashCode(content)}
               className="my-4"
               dangerouslySetInnerHTML={{ __html: content }}
             ></p>
@@ -244,7 +256,6 @@ function toHtml(item, subItem = 0) {
 
 // Get html from the legal array
 const html = legal.map((item) => {
-  console.log(item)
   return toHtml(item)
 })
 
