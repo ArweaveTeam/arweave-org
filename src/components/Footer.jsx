@@ -9,6 +9,7 @@ export function Footer() {
         <p className="text-slate-500 mt-6 text-base lg:mt-0">
           &copy; MIT License 2023. Got something to add?{' '}
           <a href="#!" target="_blank" rel="noreferrer" className="underline">
+            {/* TODO: Add link to GitHub repo. */}
             Send a PR.
           </a>{' '}
           |{' '}

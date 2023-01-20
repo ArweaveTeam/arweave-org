@@ -24,7 +24,7 @@ const resources = [
       screenshot: screenAkord,
     },
     {
-      title: 'Make your homepage on the Permaweb',
+      title: 'Make your homepage on the permaweb',
       link: 'https://permapages.app/',
       screenshot: screenPermapages,
     },

@@ -41,7 +41,6 @@ export default function CookieBanner() {
 
   // If the user has already made a choice, don't display the banner
   useEffect(() => {
-    console.log('userPreference', userPreference)
     if (userPreference !== null) {
       setShow(false)
     } else {

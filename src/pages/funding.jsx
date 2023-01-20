@@ -8,6 +8,7 @@ import logoHansa from '@/images/logos/hansa.svg'
 import logoPermadao from '@/images/logos/permadao.png'
 import logoPermaventures from '@/images/logos/permaventures.png'
 import logoLongview from '@/images/logos/longview.png'
+import logoArweaveasia from '@/images/logos/arweaveasia.png'
 
 const resources = [
   {
@@ -33,6 +34,7 @@ const resources = [
   {
     title: 'Arweave Asia Fund',
     link: 'https://arweave.asia/', // TODO: Validate this link is right
+    logo: logoArweaveasia,
   },
   {
     title: 'Community Labs',
