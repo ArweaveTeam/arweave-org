@@ -8,7 +8,7 @@ export function Header() {
   return (
     <header className="relative z-50 lg:pt-4">
       <Container className="flex flex-wrap items-center justify-center sm:justify-between lg:flex-nowrap">
-        <div className="mt-10 xl:mt-10 lg:mt-0 lg:grow lg:basis-0">
+        <div className="mt-10 lg:mt-0 lg:grow lg:basis-0 xl:mt-10">
           <Link href="/">
             <Logo className="text-slate-900 h-12 w-auto" up="up" />
           </Link>

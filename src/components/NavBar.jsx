@@ -33,8 +33,10 @@ export function NavBar({ currentPathname }) {
   let miniMenuRef = useRef()
   let [isOpen, setIsOpen] = useState(false)
 
-  let currentTitle = currentPathname && sections.find((section) => section.id === currentPathname)?.title
-  if(!currentTitle) currentTitle = 'Discover.'; // default
+  let currentTitle =
+    currentPathname &&
+    sections.find((section) => section.id === currentPathname)?.title
+  if (!currentTitle) currentTitle = 'Discover.' // default
 
   return (
     <div
@@ -58,9 +60,7 @@ export function NavBar({ currentPathname }) {
               {!open && (
                 <>
                   <span className="ml-4 text-base font-medium text-orange underline">
-                    {
-                      
-                    }
+                    {}
                   </span>
                 </>
               )}
