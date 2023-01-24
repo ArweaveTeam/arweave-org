@@ -66,14 +66,11 @@ export default function Use() {
         <Container className="relative z-10 ">
           <div className="mx-auto lg:mx-0 lg:pr-24">
             <h2 className="font-display text-4xl  tracking-tighter sm:text-5xl ">
-              Use Arweave
+              Use Arweave.
             </h2>
             <div className="mt-4 font-display text-xl tracking-tight">
               <p className="mt-4">
-                Arweave is a protocol that developers can use in many different
-                ways. Jump in and try the power of permanent data storage by
-                uploading a file, making your own homepage on the permaweb or
-                simply learning more about Arweave and its ecosystem.
+                Arweave is being used in countless different ways. Take your first steps with the power of permanent data storage by uploading a file, making your own homepage on the permaweb or simply learning more about Arweave and its ecosystem.
               </p>
             </div>
           </div>

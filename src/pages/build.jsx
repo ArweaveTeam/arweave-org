@@ -63,7 +63,7 @@ export default function Use() {
         <Container className="relative z-10 ">
           <div className="mx-auto lg:mx-0 lg:pr-24">
             <h2 className="font-display text-4xl  tracking-tighter sm:text-5xl ">
-              Build on Arweave
+              Build on Arweave.
             </h2>
             <div className="font-display text-xl tracking-tight">
               <p className="mt-4">
@@ -74,7 +74,7 @@ export default function Use() {
               <p className="mt-4">
                 The permaweb ecosystem is a full stack for building
                 decentralized web applications on Arweave. It offers everything
-                from hosting of your web apps UI, to database querying, and
+                from hosting of your web app’s UI, to database querying, and
                 domain name services – all completely decentralized. This lets
                 you build web apps with the properties of blockchains:
                 permanent, provably neutral and transparent.
