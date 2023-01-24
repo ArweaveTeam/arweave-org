@@ -30,7 +30,7 @@ export default function CookieBanner() {
       if (localStorage) {
         localStorage.setItem(localStorageKey, value)
       }
-    }, [value])
+    }, [value, localStorageKey, localStorage])
 
     return [value, setValue]
   }
