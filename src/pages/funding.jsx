@@ -43,7 +43,7 @@ const resources = [
   },
   {
     title: 'Forward Research',
-    link: 'https://forward.arweave.dev/',
+    link: 'https://fwd.arweave.dev/',
     logo: logoForward,
   },
   {
