@@ -6,7 +6,7 @@ import { Logo } from '@/components/Logo'
 
 export function Header() {
   return (
-    <header className="relative z-50 lg:pt-4">
+    <header className="relative z-50 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lg:pt-4">
       <Container className="flex flex-wrap items-center justify-center sm:justify-between lg:flex-nowrap">
         <div className="mt-10 lg:mt-0 lg:grow lg:basis-0 xl:mt-10">
           <Link href="/">

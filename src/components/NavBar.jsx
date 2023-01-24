@@ -36,7 +36,7 @@ export function NavBar({ currentPathname }) {
   let currentTitle =
     currentPathname &&
     sections.find((section) => section.id === currentPathname)?.title
-  if (!currentTitle) currentTitle = 'Discover.' // default
+  if (!currentTitle) currentTitle = 'Menu.' // default
 
   return (
     <div
@@ -60,7 +60,7 @@ export function NavBar({ currentPathname }) {
               {!open && (
                 <>
                   <span className="ml-4 text-base  text-orange underline">
-                    {}
+                    {currentTitle}
                   </span>
                 </>
               )}

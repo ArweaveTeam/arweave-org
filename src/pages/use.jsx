@@ -70,7 +70,10 @@ export default function Use() {
             </h2>
             <div className="mt-4 font-display text-xl tracking-tight">
               <p className="mt-4">
-                Arweave is being used in countless different ways. Take your first steps with the power of permanent data storage by uploading a file, making your own homepage on the permaweb or simply learning more about Arweave and its ecosystem.
+                Arweave is being used in countless different ways. Take your
+                first steps with the power of permanent data storage by
+                uploading a file, making your own homepage on the permaweb or
+                simply learning more about Arweave and its ecosystem.
               </p>
             </div>
           </div>

@@ -20,10 +20,10 @@ export default function Home() {
             decentralized and provably neutral web apps.
           </p>
           <p className="pt-4">
-            The Arweave protocol is complete, mature and widely adopted. As
-            such, its ecosystem is fully decentralized. This site is just the
-            tip of the iceberg. It acts as a map that points you to places you
-            can learn about, use and build on Arweave.
+            The Arweave protocol is stable, mature and widely adopted. As such,
+            its ecosystem is fully decentralized. This site is just the tip of
+            the iceberg. It acts as a map that points you to places you can
+            learn about, use and build on Arweave.
           </p>
           <p className="pt-4">
             Dive in! The rabbit hole is deep, and the possibilities are endless.
