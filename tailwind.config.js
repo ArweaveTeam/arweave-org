@@ -7,7 +7,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      'white': '#ffffff',
+      'white': '#fff',
       'purple': '#3f3cbb',
       'midnight': '#121063',
       'metal': '#565584',
@@ -29,6 +29,8 @@ module.exports = {
         800: '#252f3f',
         900: '#161e2e',
       },
+      'orange': '#FF5F15',
+      'link': '#0b0080'
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],

@@ -1,17 +1,26 @@
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
+import Link from 'next/link'
 
 export function Footer() {
   return (
-    <footer className="pt-40">
-      <Container className="flex flex-col items-center justify-end lg:flex-row">
-        <Logo className="text-slate-900 lg:hidden" up="up" />
-        <Logo className="text-slate-900 hidden lg:block" />
+    <footer className="mx-auto pt-40 sm:pb-20">
+      <Container className="flex flex-col items-center justify-start lg:flex-row">
         <p className="text-slate-500 mt-6 text-base lg:mt-0">
-          &copy; Copyright {new Date().getFullYear()}. Minimum Spanning
-          Technologies Limited (10889544). <br />
-          International House, 24 Holborn Viaduct, London, EC1A 2BN, United
-          Kingdom.
+          &copy; MIT License 2023. Got something to add?{' '}
+          <a
+            href="https://github.com/arweaveteam/arweave-org"
+            target="_blank"
+            rel="noreferrer"
+            className="underline"
+          >
+            {/* TODO: Add link to GitHub repo. */}
+            Send a PR.
+          </a>{' '}
+          |{' '}
+          <Link href="/legal-policies" className="underline">
+            Legal policies.
+          </Link>
         </p>
       </Container>
     </footer>

@@ -4,10 +4,10 @@ import { Popover } from '@headlessui/react'
 import clsx from 'clsx'
 
 const sections = [
-  { id: '/', title: 'Home', icon: '🏠' },
-  { id: '/use', title: 'Use Arweave', icon: '👤' },
-  { id: '/build', title: 'Build on Arweave', icon: '</>' },
-  { id: '/funding', title: 'Get Funded', icon: '$' },
+  { id: '/', title: 'Discover.', icon: '🏠' },
+  { id: '/use', title: 'Use.', icon: '👤' },
+  { id: '/build', title: 'Build.', icon: '</>' },
+  { id: '/funding', title: 'Get Funded.', icon: '$' },
 ]
 
 function MenuIcon({ open, ...props }) {
@@ -33,6 +33,11 @@ export function NavBar({ currentPathname }) {
   let miniMenuRef = useRef()
   let [isOpen, setIsOpen] = useState(false)
 
+  let currentTitle =
+    currentPathname &&
+    sections.find((section) => section.id === currentPathname)?.title
+  if (!currentTitle) currentTitle = 'Menu.' // default
+
   return (
     <div
       ref={navBarRef}
@@ -46,7 +51,7 @@ export function NavBar({ currentPathname }) {
           <>
             <div
               className={clsx(
-                'relative flex items-center py-3 px-4 ',
+                'relative flex items-center py-3 px-4',
                 !open &&
                   'bg-white/95 shadow-sm [@supports(backdrop-filter:blur(0))]:bg-white/80 [@supports(backdrop-filter:blur(0))]:backdrop-blur',
                 open && ' open'
@@ -54,11 +59,8 @@ export function NavBar({ currentPathname }) {
             >
               {!open && (
                 <>
-                  <span className="ml-4 text-base font-medium text-gray-900">
-                    {
-                      sections.find((section) => section.id === currentPathname)
-                        .title
-                    }
+                  <span className="ml-4 text-base  text-orange underline">
+                    {currentTitle}
                   </span>
                 </>
               )}
@@ -92,7 +94,14 @@ export function NavBar({ currentPathname }) {
                     setIsOpen(!isOpen)
                   }}
                 >
-                  <span className="ml-4 text-base font-medium text-gray-900">
+                  <span
+                    className={clsx(
+                      'ml-4 text-base  ',
+                      currentPathname === section.id
+                        ? 'text-orange underline'
+                        : 'text-gray-900'
+                    )}
+                  >
                     {section.title}
                   </span>
                 </Popover.Button>
@@ -105,7 +114,7 @@ export function NavBar({ currentPathname }) {
       <div className="hidden sm:flex sm:h-32 sm:justify-center sm:border-b sm:border-gray-200 sm:bg-white/95 sm:[@supports(backdrop-filter:blur(0))]:bg-white/80 sm:[@supports(backdrop-filter:blur(0))]:backdrop-blur">
         <ol
           role="list"
-          className="mb-[-2px] grid auto-cols-[minmax(0,15rem)] grid-flow-col text-2xl font-medium text-gray-900 [counter-reset:section]"
+          className="mb-[-2px] grid auto-cols-[minmax(0,15rem)] grid-flow-col text-2xl  text-gray-900 [counter-reset:section]"
         >
           {sections.map((section) => (
             <li key={section.id} className="flex [counter-increment:section]">
@@ -114,8 +123,8 @@ export function NavBar({ currentPathname }) {
                 className={clsx(
                   'flex w-full flex-col items-center justify-center border-b-2 before:mb-2 before:font-mono before:text-sm before:content-[counter(section,decimal-leading-zero)]',
                   currentPathname === section.id
-                    ? 'border-gray-600 bg-gray-50 text-gray-600 before:text-gray-600'
-                    : 'border-transparent before:text-gray-500 hover:bg-gray-50/40 hover:before:text-gray-900'
+                    ? 'border-b-8 border-orange text-orange before:text-orange'
+                    : 'border-transparent before:text-gray-500 hover:bg-gray-50/40 hover:text-orange hover:before:text-orange'
                 )}
               >
                 {section.title}

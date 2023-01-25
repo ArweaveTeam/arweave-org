@@ -1,4 +1,7 @@
 import Image from 'next/image'
+import clsx from 'clsx'
+
+// On hover of the image, add 🚧 for the resources that have construction: true
 
 export default function ResourceList({ resources }) {
   return (
@@ -8,22 +11,25 @@ export default function ResourceList({ resources }) {
     >
       {resources.map((resource) => (
         <a
-          key={resource.name}
+          key={resource.link}
           href={resource.link}
           target="_blank"
           rel="noreferrer"
-          className="col-span-1 flex flex-col text-center"
+          className={clsx(
+            'relative col-span-1 flex flex-col text-center',
+            resource.construction &&
+              ' hover:before:absolute hover:before:bottom-8 hover:before:right-8 hover:before:content-["🚧"]'
+          )}
         >
           <div className="flex flex-1 flex-col p-8 align-middle">
-            {/* If resource.logo, show the logo, otherwise show the name */}
             {resource.logo ? (
               <Image
                 src={resource.logo}
                 alt={resource.title}
-                className="mx-auto inline-block h-20 w-auto flex-shrink-0 align-middle grayscale transition duration-300 ease-in-out hover:grayscale-0"
+                className="duration-50 mx-auto inline-block h-20 w-auto flex-shrink-0 border-b-2 border-transparent align-middle transition ease-in-out hover:border-spacing-2 hover:border-orange"
               />
             ) : (
-              <h3 className="text-3xl font-medium text-gray-900">
+              <h3 className="duration-50 border-b-2 border-transparent  text-3xl  text-gray-900 transition hover:border-spacing-2 hover:border-orange">
                 {resource.title}
               </h3>
             )}

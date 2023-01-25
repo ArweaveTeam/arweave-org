@@ -1,56 +1,57 @@
 import { Container } from '@/components/Container'
 import screenArwiki from '@/images/screenshot/build/arwiki.png'
+import screenArwiki2 from '@/images/screenshot/build/arwiki2.png'
 import screenCookbook from '@/images/screenshot/build/cookbook.png'
-import screenWarp from '@/images/screenshot/build/warp.png'
-import screenExm from '@/images/screenshot/build/exm.png'
-import screenWeavedb from '@/images/screenshot/build/weavedb.png'
-import screenArdb from '@/images/screenshot/build/ardb.jpg'
-import screenKwil from '@/images/screenshot/build/kwil.png'
 import ResourceScreenList from '@/components/ResourceScreenList'
+import screenDiscord from '@/images/screenshot/build/discord.png'
+import screenUploadData from '@/images/screenshot/build/upload-data2.png'
+import screenArweaveAsDb from '@/images/screenshot/build/arweave-as-db.png'
+import screenWarp from '@/images/screenshot/build/warp.png'
+import screenFullstack from '@/images/screenshot/build/fullstack.png'
 
 const resources = [
-  // Tutorials
   [
     {
-      title: 'Down the rabbit hole',
-      link: 'https://arwiki.wiki/',
-      screenshot: screenArwiki,
+      title: 'Upload your first data',
+      link: 'https://cookbook.arweave.dev/concepts/post-transactions.html',
+      screenshot: screenUploadData,
     },
     {
-      title: 'Build apps on Arweave',
-      link: 'https://cookbook.arweave.dev/',
-      screenshot: screenCookbook,
+      title: 'Build a fully decentralized app',
+      link: 'https://arwiki.arweave.dev/#/en/creating-a-dapp',
+      screenshot: screenArwiki2,
     },
-  ],
-  // SmartWeave Contracts
-  [
     {
-      title: 'Warp',
+      title: 'Use Arweave as a database',
+      link: 'https://cookbook.arweave.dev/concepts/queryTransactions.html',
+      screenshot: screenArweaveAsDb,
+    },
+    {
+      title: 'Launch Smart Contracts on Arweave',
       link: 'https://warp.cc/',
       screenshot: screenWarp,
     },
-    {
-      title: 'EXM',
-      link: 'https://exm.dev/',
-      screenshot: screenExm,
-    },
   ],
-  // Use AR as a Database
   [
     {
-      title: 'WeaveDB',
-      link: 'https://weavedb.dev/',
-      screenshot: screenWeavedb,
+      title: 'Arweave+SmartWeave App Development Workshop',
+      link: 'https://www.youtube.com/watch?v=cGLMN5A2C4E',
+      screenshot: screenFullstack,
     },
     {
-      title: 'ArDB',
-      link: 'https://github.com/textury/ardb',
-      screenshot: screenArdb,
+      title: 'Explore the cookbook',
+      link: 'https://cookbook.arweave.dev',
+      screenshot: screenCookbook,
     },
     {
-      title: 'Kwil',
-      link: 'https://www.kwil.com/',
-      screenshot: screenKwil,
+      title: 'Understand the protocol',
+      link: 'https://arwiki.arweave.dev/#/en/Arweave',
+      screenshot: screenArwiki,
+    },
+    {
+      title: 'Join the developer Discord',
+      link: 'https://discord.gg/AhsZfBm',
+      screenshot: screenDiscord,
     },
   ],
 ]
@@ -59,40 +60,39 @@ export default function Use() {
   return (
     <>
       <section id="build" aria-label="Build on Arweave">
-        <Container className="relative z-10">
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl lg:pr-24">
-            <h2 className="text-blue-600 font-display text-4xl font-medium tracking-tighter sm:text-5xl">
-              Build on Arweave
+        <Container className="relative z-10 ">
+          <div className="mx-auto lg:mx-0 lg:pr-24">
+            <h2 className="font-display text-4xl  tracking-tighter sm:text-5xl ">
+              Build on Arweave.
             </h2>
-            <p className="text-blue-900 mt-4 font-display text-2xl tracking-tight">
-              Experience the power of decentralized data storage with Arweave.
-              Browse and discover the benefits of using a permanent,
-              tamper-proof, and censor-free data storage solution.
-            </p>
-            <p className="pt-5">
-              <a
-                href="https://discord.gg/AhsZfBm"
-                className="text-link"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Join our Developer Discord
-              </a>
-            </p>
+            <div className="font-display text-xl tracking-tight">
+              <p className="mt-4">
+                Arweave lets you build quickly and simply with permanent
+                storage. You can store anything from files to fully
+                decentralized web applications.
+              </p>
+              <p className="mt-4">
+                The permaweb ecosystem is a full stack for building
+                decentralized web applications on Arweave. It offers everything
+                from hosting of your web app’s UI, to database querying, and
+                domain name services – all completely decentralized. This lets
+                you build web apps with the properties of blockchains:
+                permanent, provably neutral and transparent.
+              </p>
+            </div>
           </div>
 
+          <h2 className="pt-8 font-display text-3xl  tracking-tighter sm:text-3xl">
+            Get Started.
+          </h2>
           <div className="mx-auto">
             <ResourceScreenList resources={resources[0]} />
-
-            <h2 className="text-blue-600 pt-5 font-display text-3xl font-medium tracking-tighter sm:text-3xl">
-              SmartWeave Contracts
-            </h2>
+          </div>
+          <h2 className="pt-8 font-display text-3xl  tracking-tighter sm:text-3xl">
+            Dive Deep.
+          </h2>
+          <div className="mx-auto sm:pb-20">
             <ResourceScreenList resources={resources[1]} />
-
-            <h2 className="text-blue-600 pt-5 font-display text-3xl font-medium tracking-tighter sm:text-3xl">
-              Use Arweave as a Database
-            </h2>
-            <ResourceScreenList resources={resources[2]} />
           </div>
         </Container>
       </section>

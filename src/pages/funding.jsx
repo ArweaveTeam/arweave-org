@@ -8,11 +8,12 @@ import logoHansa from '@/images/logos/hansa.svg'
 import logoPermadao from '@/images/logos/permadao.png'
 import logoPermaventures from '@/images/logos/permaventures.png'
 import logoLongview from '@/images/logos/longview.png'
+import logoArweaveasia from '@/images/logos/arweaveasia.png'
 
 const resources = [
   {
     title: 'Permanent Ventures',
-    link: 'https://permanent.ventures/', // TODO: Validate this link is right
+    link: 'https://twitter.com/permanentvc',
     logo: logoPermaventures,
   },
   {
@@ -32,7 +33,9 @@ const resources = [
   },
   {
     title: 'Arweave Asia Fund',
-    link: 'https://arweave.asia/', // TODO: Validate this link is right
+    link: 'https://arscp.com/',
+    logo: logoArweaveasia,
+    construction: true,
   },
   {
     title: 'Community Labs',
@@ -41,7 +44,7 @@ const resources = [
   },
   {
     title: 'Forward Research',
-    link: 'https://forward.arweave.dev/',
+    link: 'https://fwd.arweave.dev/',
     logo: logoForward,
   },
   {
@@ -55,19 +58,28 @@ export default function Fund() {
   return (
     <>
       <section id="fund" aria-label="Get Funded">
-        <Container className="relative z-10">
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl lg:pr-24">
-            <h2 className="text-blue-600 font-display text-4xl font-medium tracking-tighter sm:text-5xl">
-              Get Funded
+        <Container className="relative z-10 ">
+          <div className="mx-auto lg:mx-0 lg:pr-24">
+            <h2 className="font-display text-4xl  tracking-tighter sm:text-5xl ">
+              Get Funded.
             </h2>
-            <p className="text-blue-900 mt-4 font-display text-2xl tracking-tight">
-              Unlock funding and investment opportunities with Arweave.
-              Revolutionize the way you store and share data and be a part of
-              Arweave&apos;s vision of a decentralized future.
-            </p>
+            <div className="font-display text-xl tracking-tight">
+              <p className="mt-4">
+                Arweave is a fully decentralized ecosystem. There are numerous
+                dedicated organizations – ranging from non-profits, to DAOs and
+                ventures studios – that back its development and help the
+                ecosystem grow. Many of these organizations have grant and
+                investment opportunities available for those contributing to the
+                Arweave ecosystem.
+              </p>
+              <p className="mt-4">
+                Thinking of building a project on Arweave? Start building, reach
+                out, get funded!
+              </p>
+            </div>
           </div>
 
-          <div className="mx-auto pt-20">
+          <div className="mx-auto pt-20 sm:pb-20">
             <ResourceList resources={resources} />
           </div>
         </Container>
