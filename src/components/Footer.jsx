@@ -8,7 +8,12 @@ export function Footer() {
       <Container className="flex flex-col items-center justify-start lg:flex-row">
         <p className="text-slate-500 mt-6 text-base lg:mt-0">
           &copy; MIT License 2023. Got something to add?{' '}
-          <a href="#!" target="_blank" rel="noreferrer" className="underline">
+          <a
+            href="https://github.com/arweaveteam/arweave-org"
+            target="_blank"
+            rel="noreferrer"
+            className="underline"
+          >
             {/* TODO: Add link to GitHub repo. */}
             Send a PR.
           </a>{' '}
