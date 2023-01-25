@@ -1,4 +1,7 @@
 import Image from 'next/image'
+import clsx from 'clsx'
+
+// On hover of the image, add 🚧 for the resources that have construction: true
 
 export default function ResourceList({ resources }) {
   return (
@@ -12,10 +15,13 @@ export default function ResourceList({ resources }) {
           href={resource.link}
           target="_blank"
           rel="noreferrer"
-          className="col-span-1 flex flex-col text-center"
+          className={clsx(
+            'relative col-span-1 flex flex-col text-center',
+            resource.construction &&
+              ' hover:before:absolute hover:before:bottom-8 hover:before:right-8 hover:before:content-["🚧"]'
+          )}
         >
           <div className="flex flex-1 flex-col p-8 align-middle">
-            {/* If resource.logo, show the logo, otherwise show the name */}
             {resource.logo ? (
               <Image
                 src={resource.logo}

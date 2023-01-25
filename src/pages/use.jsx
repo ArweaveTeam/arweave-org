@@ -1,5 +1,6 @@
 import { Container } from '@/components/Container'
 import { TrustedBy } from '@/components/TrustedBy'
+import ResourceScreenList from '@/components/ResourceScreenList'
 import screenArweave101 from '@/images/screenshot/use/arweave101.png'
 import screenAkord from '@/images/screenshot/use/akord.png'
 import screenPermapages from '@/images/screenshot/use/permapages.png'
@@ -8,16 +9,16 @@ import screenPermacast from '@/images/screenshot/use/permacast.png'
 import screenArweavenews from '@/images/screenshot/use/arweavenews.png'
 import screenList from '@/images/screenshot/use/arweavelists.png'
 import screenAcceleratear from '@/images/screenshot/use/acceleratear.png'
-import ResourceScreenList from '@/components/ResourceScreenList'
+import screenArwiki from '@/images/screenshot/use/arwiki.png'
 
 const resources = [
   // Use Arweave
   [
-    {
-      title: 'Arweave 101',
-      link: '#!', // TODO: Validate this link is right
-      screenshot: screenArweave101,
-    },
+    // {
+    //   title: 'Arweave 101',
+    //   link: '#!', // TODO: Validate this link is right
+    //   screenshot: screenArweave101,
+    // },
     {
       title: 'Save a file forever',
       link: 'https://akord.com/',
@@ -32,6 +33,11 @@ const resources = [
       title: 'Arweave for Enterprise',
       link: 'https://acceleratear.co/',
       screenshot: screenAcceleratear,
+    },
+    {
+      title: 'Explore the wiki',
+      link: 'https://arwiki.wiki/',
+      screenshot: screenArwiki,
     },
   ],
   // Learn More
