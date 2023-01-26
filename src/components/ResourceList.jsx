@@ -13,7 +13,7 @@ export default function ResourceList({ resources }) {
         <a
           key={resource.link}
           href={resource.link}
-          target="_blank"
+          target={resource.link.startsWith('#') ? '' : '_blank'}
           rel="noreferrer"
           className={clsx(
             'relative col-span-1 flex flex-col text-center',
