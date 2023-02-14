@@ -31,7 +31,7 @@ const resources = [
     },
     {
       title: 'Arweave for Enterprise',
-      link: 'https://acceleratear.co/',
+      link: 'https://acceleratear.co/arweave/',
       screenshot: screenAcceleratear,
     },
     {
