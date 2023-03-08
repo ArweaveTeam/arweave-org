@@ -8,6 +8,15 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  redirects: async () => {
+    return [
+      {
+        source: '/yellow-paper.pdf',
+        destination: 'https://yellow-paper.arweave.dev/',
+        permanent: true,
+      }
+    ]
+  }
 }
 
 module.exports = nextConfig
