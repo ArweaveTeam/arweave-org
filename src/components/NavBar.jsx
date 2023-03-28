@@ -42,7 +42,7 @@ export function NavBar({ currentPathname }) {
     <div
       ref={navBarRef}
       className={clsx(
-        'fixed bottom-0 right-0 left-0 z-50',
+        'fixed bottom-0 left-0 right-0 z-50',
         isOpen && ' bottom-28'
       )}
     >
@@ -51,7 +51,7 @@ export function NavBar({ currentPathname }) {
           <>
             <div
               className={clsx(
-                'relative flex items-center py-3 px-4',
+                'relative flex items-center px-4 py-3',
                 !open &&
                   'bg-white/95 shadow-sm [@supports(backdrop-filter:blur(0))]:bg-white/80 [@supports(backdrop-filter:blur(0))]:backdrop-blur',
                 open && ' open'
@@ -89,7 +89,7 @@ export function NavBar({ currentPathname }) {
                   as={Link}
                   key={section.id}
                   href={`${section.id}`}
-                  className="flex items-center py-1.5 px-4"
+                  className="flex items-center px-4 py-1.5"
                   onClick={() => {
                     setIsOpen(!isOpen)
                   }}

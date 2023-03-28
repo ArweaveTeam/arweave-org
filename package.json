@@ -4,7 +4,8 @@
   "private": true,
   "engines": {
     "node": "18.x",
-    "yarn": "1.x"
+    "yarn": "1.x",
+    "npm": "8.x"
   },
   "scripts": {
     "start": "next start",

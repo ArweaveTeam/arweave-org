@@ -26,13 +26,13 @@ export function TrustedBy() {
     <section
       id="trustedby"
       aria-label="Trusted By"
-      className="scroll-mt-14 pt-10 sm:pt-10 sm:pb-20"
+      className="scroll-mt-14 pt-10 sm:pb-20 sm:pt-10"
     >
       <Container>
         <h2 className="pt-8 font-display text-3xl  tracking-tighter sm:text-3xl">
           Trusted by the best.
         </h2>
-        <div className="mx-auto mt-10 grid max-w-max grid-cols-2 place-content-center gap-y-12 gap-x-32 md:grid-cols-4 md:gap-x-16 lg:gap-x-32">
+        <div className="mx-auto mt-10 grid max-w-max grid-cols-2 place-content-center gap-x-32 gap-y-12 md:grid-cols-4 md:gap-x-16 lg:gap-x-32">
           {trustedby.map((trustee) => (
             <a
               href={trustee.link}
