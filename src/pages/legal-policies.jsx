@@ -210,6 +210,16 @@ London, EC1A 2BN, United Kingdom.`,
               'Unless otherwise indicated, all trademarks on this website are protected under applicable trademark law. This applies in particular to trademarks, type designations, logos and emblems.',
             ],
           },
+          {
+            title: 'Disclaimer - read carefully before using Arweave',
+            content: [
+              'The Arweave software enables you to store data permanently in the decentralized blockweave. Once data has been stored by one or more miners, there is no guaranteed way of deleting this data. Therefore, please do not store any personal or confidential data in clear text in the blockweave (e.g., names, personal identifiers, but also other information that may identify individuals or that should not be made public).',
+              'Applicable laws might allow you to store encrypted personal or confidential data in the blockweave, but you are responsible for your own compliance with data protection and other applicable laws (e.g., checking whether you have a legal basis for doing so and informing data subjects).',
+              'Please read our documentation on the website carefully before using the blockweave.',
+              'Note that Minimum Spanning Technologies Limited is not responsible for the operation of the blockweave, but operates this website for information purposes only.',
+              'By using Arweave, you accept the terms above.'
+            ]
+          }
         ],
       },
     ],
