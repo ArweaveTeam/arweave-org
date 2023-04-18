@@ -1,7 +1,7 @@
 import { Container } from '@/components/Container'
 import screenArwiki from '@/images/screenshot/build/arwiki.png'
 import screenArwiki2 from '@/images/screenshot/build/arwiki2.png'
-import screenCookbook from '@/images/screenshot/build/cookbook.png'
+import screenCookbook from '@/images/screenshot/build/cookbook.webp'
 import ResourceScreenList from '@/components/ResourceScreenList'
 import screenDiscord from '@/images/screenshot/build/discord.png'
 import screenUploadData from '@/images/screenshot/build/upload-data2.png'
