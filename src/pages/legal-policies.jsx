@@ -211,15 +211,15 @@ London, EC1A 2BN, United Kingdom.`,
             ],
           },
           {
-            title: 'Disclaimer - read carefully before using Arweave',
+            title: 'Disclaimer',
             content: [
               'The Arweave software enables you to store data permanently in the decentralized blockweave. Once data has been stored by one or more miners, there is no guaranteed way of deleting this data. Therefore, please do not store any personal or confidential data in clear text in the blockweave (e.g., names, personal identifiers, but also other information that may identify individuals or that should not be made public).',
               'Applicable laws might allow you to store encrypted personal or confidential data in the blockweave, but you are responsible for your own compliance with data protection and other applicable laws (e.g., checking whether you have a legal basis for doing so and informing data subjects).',
+              'If you have uploaded encrypted personal data you can set two flags either (i) telling miners that your encrypted personal data should not be stored outside of the EU or (ii) that your previously uploaded encrypted personal data should be deleted. There is no guarantee that miners respect those flags.',
               'Please read our documentation on the website carefully before using the blockweave.',
               'Note that Minimum Spanning Technologies Limited is not responsible for the operation of the blockweave, but operates this website for information purposes only.',
-              'By using Arweave, you accept the terms above.'
-            ]
-          }
+            ],
+          },
         ],
       },
     ],
