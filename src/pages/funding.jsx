@@ -33,9 +33,8 @@ const resources = [
   },
   {
     title: 'Arweave Asia Fund',
-    link: '#!',
+    link: 'https://arscp.ventures/',
     logo: logoArweaveasia,
-    construction: true,
   },
   {
     title: 'Community Labs',
