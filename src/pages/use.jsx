@@ -21,7 +21,7 @@ const resources = [
     // },
     {
       title: 'Save a file forever',
-      link: 'https://akord.com/products/web-app',
+      link: 'https://akord.com',
       screenshot: screenAkord,
     },
     {
