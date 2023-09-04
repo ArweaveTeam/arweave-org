@@ -13,8 +13,8 @@ const legal = [
         content: [
           `We are responsible within the meaning of Article 4 (7) GDPR. You can reach us at: <br/>
                 Minimum Spanning Technologies Limited (10889544)<br/>
-International House, 24 Holborn Viaduct, <br/>
-London, EC1A 2BN, United Kingdom.`,
+International House, 36-38 Cornhill, <br/>
+London, EC3V 3NG, United Kingdom.`,
         ],
       },
       {
