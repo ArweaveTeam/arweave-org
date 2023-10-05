@@ -20,3 +20,6 @@ a.text-link {
 a.text-link:hover {
   @apply border-b-2 border-gray-400;
 }
+.btn {
+  @apply inline-block rounded-xl bg-gray-900 px-5 py-1 text-center text-white;
+}

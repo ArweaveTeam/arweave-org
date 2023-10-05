@@ -14,13 +14,17 @@ export function Footer() {
             rel="noreferrer"
             className="underline"
           >
-            {/* TODO: Add link to GitHub repo. */}
             Send a PR.
           </a>{' '}
           |{' '}
           <Link href="/legal-policies" className="underline">
             Legal policies.
+          </Link>{' '}
+          |{' '}
+          <Link href="/press-kit" className="underline">
+            Press Kit
           </Link>
+          .
         </p>
       </Container>
     </footer>
