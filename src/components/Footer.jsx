@@ -14,7 +14,6 @@ export function Footer() {
             rel="noreferrer"
             className="underline"
           >
-            {/* TODO: Add link to GitHub repo. */}
             Send a PR.
           </a>{' '}
           |{' '}
