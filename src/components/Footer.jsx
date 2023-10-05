@@ -20,7 +20,12 @@ export function Footer() {
           |{' '}
           <Link href="/legal-policies" className="underline">
             Legal policies.
+          </Link>{' '}
+          |{' '}
+          <Link href="/press-kit" className="underline">
+            Press Kit
           </Link>
+          .
         </p>
       </Container>
     </footer>
