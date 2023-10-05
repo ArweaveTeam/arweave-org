@@ -21,8 +21,8 @@ export function Footer() {
             Legal policies.
           </Link>{' '}
           |{' '}
-          <Link href="/press-kit" className="underline">
-            Press Kit
+          <Link href="/brand-kit" className="underline">
+            Brand Kit
           </Link>
           .
         </p>

@@ -1,17 +1,17 @@
 import { Container } from '@/components/Container'
 import Image from 'next/image'
-import LogoType from '@/images/press-kit/logotype.svg'
-import Glyph from '@/images/press-kit/glyph.svg'
-import MinSize from '@/images/press-kit/min-size.svg'
-import Colours from '@/images/press-kit/colours.png'
-import SealW from '@/images/press-kit/seal-white.svg'
-import SealD from '@/images/press-kit/seal-dark.svg'
+import LogoType from '@/images/brand-kit/logotype.svg'
+import Glyph from '@/images/brand-kit/glyph.svg'
+import MinSize from '@/images/brand-kit/min-size.svg'
+import Colours from '@/images/brand-kit/colours.png'
+import SealW from '@/images/brand-kit/seal-white.svg'
+import SealD from '@/images/brand-kit/seal-dark.svg'
 
 export default function Use() {
   return (
     <>
       <section
-        id="press-kit"
+        id="brand-kit"
         aria-label="Arweave Branding Guide"
         className="mb-16"
       >
@@ -28,7 +28,7 @@ export default function Use() {
                 identity consistent, derivatives are currently not allowed.
               </div>
               <div className="mt-4 md:mx-auto">
-                <a href="/press-kit/ArweaveALL.zip" className="btn">
+                <a href="/brand-kit/ArweaveALL.zip" className="btn">
                   Download all Assets
                 </a>
               </div>
@@ -43,10 +43,10 @@ export default function Use() {
             <p className="pt-4">
               <span className="mr-10">Download Logotype</span>
               <div className="md:inline">
-                <a href="/press-kit/LogotypeSVG.zip" className="btn md:mx-2">
+                <a href="/brand-kit/LogotypeSVG.zip" className="btn md:mx-2">
                   SVG
                 </a>
-                <a href="/press-kit/LogotypePNG.zip" className="btn mx-2">
+                <a href="/brand-kit/LogotypePNG.zip" className="btn mx-2">
                   PNG
                 </a>
               </div>
@@ -78,10 +78,10 @@ export default function Use() {
               <p className="pt-5 text-xl">
                 <span className="mr-10">Download Glyph</span>
                 <div className="md:inline">
-                  <a href="/press-kit/GlyphSVG.zip" className="btn md:mx-2">
+                  <a href="/brand-kit/GlyphSVG.zip" className="btn md:mx-2">
                     SVG
                   </a>
-                  <a href="/press-kit/GlyphPNG.zip" className="btn mx-2">
+                  <a href="/brand-kit/GlyphPNG.zip" className="btn mx-2">
                     PNG
                   </a>
                 </div>
@@ -184,12 +184,12 @@ export default function Use() {
                 <span className="mr-10">Download Arweave Seal</span>
                 <div className="md:inline">
                   <a
-                    href="/press-kit/ArweaveSealSVG.zip"
+                    href="/brand-kit/ArweaveSealSVG.zip"
                     className="btn md:mx-2"
                   >
                     SVG
                   </a>
-                  <a href="/press-kit/ArweaveSealPNG.zip" className="btn mx-2">
+                  <a href="/brand-kit/ArweaveSealPNG.zip" className="btn mx-2">
                     PNG
                   </a>
                 </div>
