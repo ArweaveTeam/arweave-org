@@ -58,7 +58,7 @@ export default function Use() {
             Glyph.
           </h2>
           <div className="grid gap-4 md:grid-cols-5 md:pb-10 md:pt-20">
-            <div className="md:order-last md:col-span-2 md:mx-auto md:pt-2">
+            <div className="pt-10 md:order-last md:col-span-2 md:mx-auto md:pt-2">
               <Image src={Glyph} alt="Arweave Glyph" />
             </div>
             <div className="md:col-span-3 lg:pt-5">
@@ -94,8 +94,8 @@ export default function Use() {
             Minimum Size.
           </h2>
           <div className="grid gap-4 md:grid-cols-5 md:pt-10">
-            <div className="md:order-last md:col-span-2 md:mx-auto md:pt-5">
-              <Image src={MinSize} alt="Minimum Size" />
+            <div className="pt-10 md:order-last md:col-span-2 md:mx-auto md:pt-5">
+              <Image src={MinSize} alt="Minimum Size" className="max-h-80" />
             </div>
             <div className="md:col-span-3 lg:pt-5">
               <h2 className="hidden pt-10 font-display text-3xl tracking-tighter  sm:text-3xl md:block">
