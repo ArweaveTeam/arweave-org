@@ -30,7 +30,7 @@ const resources = [
       screenshot: screenPermapages,
     },
     {
-      title: 'Attend to events',
+      title: 'Attend Arweave events',
       link: 'https://arweavehub.com/',
       screenshot: screenHub,
     },
