@@ -8,7 +8,7 @@ import screenPioneers from '@/images/screenshot/use/pioneers.png'
 import screenPermacast from '@/images/screenshot/use/permacast.png'
 import screenArweavenews from '@/images/screenshot/use/arweavenews.png'
 import screenList from '@/images/screenshot/use/arweavelists.png'
-import screenEvents from '@/images/screenshot/use/arweaveevents.png'
+import screenHub from '@/images/screenshot/use/arweavehub.png'
 import screenArwiki from '@/images/screenshot/use/arwiki.png'
 
 const resources = [
@@ -30,9 +30,9 @@ const resources = [
       screenshot: screenPermapages,
     },
     {
-      title: 'Arweave Events',
-      link: 'https://arweave.events',
-      screenshot: screenEvents,
+      title: 'Attend to events',
+      link: 'https://arweavehub.com/',
+      screenshot: screenHub,
     },
     {
       title: 'Explore the wiki',
