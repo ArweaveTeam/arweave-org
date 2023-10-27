@@ -124,7 +124,7 @@ export default function Use() {
               <p className="text-xl md:pt-6">
                 Black: hex #222326, rgb(34,35,38) <br />
                 White: hex #FFFFFF, rgb(255, 255, 255) <br />
-                Orange: hex #d55e2d, rgb(214, 94, 45)
+                Orange: hex #ff6700, rgb(255, 103, 0)
               </p>
             </div>
           </div>

@@ -21,7 +21,7 @@ module.exports = {
         800: '#252f3f',
         900: '#161e2e',
       },
-      'orange': '#FF5F15',
+      'orange': '#ff6700',
       'link': '#0b0080'
     },
     fontSize: {
