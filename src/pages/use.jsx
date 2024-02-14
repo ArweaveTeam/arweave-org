@@ -44,7 +44,7 @@ const resources = [
   [
     {
       title: 'Check out the latest on Arweave.news',
-      link: 'https://arweave.news/',
+      link: 'https://permaweb.news/',
       screenshot: screenArweavenews,
     },
     {
