@@ -21,7 +21,7 @@ const resources = [
     // },
     {
       title: 'Save a file forever',
-      link: 'https://akord.com',
+      link: 'https://akord.com/use-arweave',
       screenshot: screenAkord,
     },
     {
