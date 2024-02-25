@@ -12,9 +12,9 @@ export default function ResourceScreenList({ resources }) {
           href={resource.link}
           target="_blank"
           rel="noreferrer"
-          className="col-span-1 flex flex-col text-center transition duration-300 ease-in-out"
+          className="col-span-1 flex flex-col text-center transition duration-300 ease-in-out hover:shadow-sm hover:scale-105 transform hover:border-orange"
         >
-          <div className="flex flex-1 flex-col pt-8 align-middle  hover:text-link hover:underline">
+          <div className="flex flex-1 flex-col pt-8 align-middle  hover:text-orange hover:underline">
             {/* If resource.logo, show the logo, otherwise show the name */}
             {resource.screenshot ? (
               <>

@@ -59,7 +59,7 @@ export default function Fund() {
       <section id="fund" aria-label="Get Funded">
         <Container className="relative z-10 ">
           <div className="mx-auto lg:mx-0 lg:pr-24">
-            <h2 className="font-display text-4xl  tracking-tighter sm:text-5xl ">
+            <h2 className="font-display text-4xl tracking-tighter sm:text-5xl animate__animated animate__fadeIn">
               Get Funded.
             </h2>
             <div className="font-display text-xl tracking-tight">
@@ -71,9 +71,14 @@ export default function Fund() {
                 investment opportunities available for those contributing to the
                 Arweave ecosystem.
               </p>
-              <p className="mt-4">
-                Thinking of building a project on Arweave? Start building, reach
-                out, get funded!
+              <p className="mt-4 text-lg text-black">
+                Thinking about embarking on an Arweave project? Start{' '}
+                <a href="/build" className="text-orange hover:underline">
+                  building
+                </a>, connect with{' '}
+                <a href="https://twitter.com/ArweaveEco" className="text-orange hover:underline">
+                  us
+                </a>, and secure funding for your ideas!
               </p>
             </div>
           </div>

@@ -1,5 +1,4 @@
 import Image from 'next/image'
-
 import { Container } from '@/components/Container'
 import logoMeta from '@/images/trustedby/meta.svg'
 import logoMetaplex from '@/images/trustedby/metaplex.png'
@@ -23,28 +22,24 @@ const trustedby = [
 
 export function TrustedBy() {
   return (
-    <section
-      id="trustedby"
-      aria-label="Trusted By"
-      className="scroll-mt-14 pt-10 sm:pb-20 sm:pt-10"
-    >
+    <section id="trustedby" aria-label="Trusted By" className="py-16 sm:py-20">
       <Container>
-        <h2 className="pt-8 font-display text-3xl  tracking-tighter sm:text-3xl">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-display mb-10 tracking-tight">
           Trusted by the best.
         </h2>
-        <div className="mx-auto mt-10 grid max-w-max grid-cols-2 place-content-center gap-x-32 gap-y-12 md:grid-cols-4 md:gap-x-16 lg:gap-x-32">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 place-items-center">
           {trustedby.map((trustee) => (
             <a
               href={trustee.link}
               target="_blank"
               rel="noreferrer"
               key={trustee.name}
-              className="flex items-center justify-center"
+              className="hover:scale-105 transform transition-transform duration-300"
             >
               <Image
                 src={trustee.logo}
                 alt={trustee.name}
-                className=" transition duration-300 ease-in-out "
+                className="w-32 h-32 object-contain"
                 unoptimized
               />
             </a>

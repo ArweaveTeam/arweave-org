@@ -1,14 +1,9 @@
-import Image from 'next/image'
-import clsx from 'clsx'
-
-// On hover of the image, add 🚧 for the resources that have construction: true
+import Image from 'next/image';
+import clsx from 'clsx';
 
 export default function ResourceList({ resources }) {
   return (
-    <div
-      role="list"
-      className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-    >
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {resources.map((resource) => (
         <a
           key={resource.link}
@@ -16,26 +11,30 @@ export default function ResourceList({ resources }) {
           target={resource.link.startsWith('#') ? '' : '_blank'}
           rel="noreferrer"
           className={clsx(
-            'relative col-span-1 flex flex-col text-center',
-            resource.construction &&
-              ' hover:before:absolute hover:before:bottom-8 hover:before:right-8 hover:before:content-["🚧"]'
+            'relative col-span-1 flex flex-col text-center p-4 border rounded-lg border-gray-200 transition-transform transform hover:shadow-xl hover:border-orange',
+            resource.construction && 'bg-yellow-100'
           )}
         >
-          <div className="flex flex-1 flex-col p-8 align-middle">
+          <div className="flex flex-1 flex-col items-center">
             {resource.logo ? (
               <Image
                 src={resource.logo}
                 alt={resource.title}
-                className="duration-50 mx-auto inline-block h-20 w-auto flex-shrink-0 border-b-2 border-transparent align-middle transition ease-in-out hover:border-spacing-2 hover:border-orange"
+                className="w-32 h-32 object-contain"
               />
             ) : (
-              <h3 className="duration-50 border-b-2 border-transparent  text-3xl  text-gray-900 transition hover:border-spacing-2 hover:border-orange">
+              <h3 className="text-xl text-gray-900">
                 {resource.title}
               </h3>
             )}
           </div>
+          {resource.construction && (
+            <div className="text-yellow-700 mt-2">
+              🚧 Under Construction
+            </div>
+          )}
         </a>
       ))}
     </div>
-  )
+  );
 }
