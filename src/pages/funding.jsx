@@ -66,7 +66,7 @@ export default function Fund() {
               <p className="mt-4">
                 Arweave is a fully decentralized ecosystem. There are numerous
                 dedicated organizations – ranging from non-profits, to DAOs and
-                ventures studios – that back its development and help the
+                venture studios – that back its development and help the
                 ecosystem grow. Many of these organizations have grant and
                 investment opportunities available for those contributing to the
                 Arweave ecosystem.
