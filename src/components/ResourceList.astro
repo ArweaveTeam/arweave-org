@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  resources: {
+    title: string;
+    link: string;
+    logo: ImageMetadata;
+    construction?: boolean;
+  }[];
+}
+
+const { resources } = Astro.props;
+---
+
+<div
+  role="list"
+  class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+>
+  {
+    resources.map((resource) => (
+      <a
+        href={resource.link}
+        target={resource.link.startsWith("#") ? "" : "_blank"}
+        rel="noreferrer"
+        class:list={[
+          "relative col-span-1 flex flex-col text-center",
+          resource.construction &&
+            'hover:before:absolute hover:before:bottom-8 hover:before:right-8 hover:before:content-["🚧"]',
+        ]}
+      >
+        <div class="flex flex-1 flex-col p-8 align-middle items-center">
+          {resource.logo ? (
+            <Image
+              src={resource.logo}
+              alt={resource.title}
+              class="duration-50 mx-auto inline-block h-20 w-auto flex-shrink-0 border-b-2 border-transparent align-middle transition ease-in-out hover:border-spacing-2 hover:border-orange"
+            />
+          ) : (
+            <h3 class="duration-50 border-b-2 border-transparent  text-3xl  text-gray-900 transition hover:border-spacing-2 hover:border-orange">
+              {resource.title}
+            </h3>
+          )}
+        </div>
+      </a>
+    ))
+  }
+</div>

@@ -1,0 +1,22 @@
+---
+import Container from "./Container.astro";
+---
+
+<footer class="mx-auto pt-40 sm:pb-20">
+  <Container className="flex flex-col items-center justify-start lg:flex-row">
+    <p class="text-slate-500 mt-6 text-base lg:mt-0">
+      &copy; MIT License {new Date().getFullYear()}. Got something to add?
+      <a
+        href="https://github.com/arweaveteam/arweave-org"
+        target="_blank"
+        rel="noreferrer"
+        class="underline">Send a PR.</a
+      > | <a href="/legal-policies" class="underline"> Legal policies.</a> | <a
+        href="/brand-kit"
+        class="underline"
+      >
+        Brand Kit.</a
+      >
+    </p>
+  </Container>
+</footer>

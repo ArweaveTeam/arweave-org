@@ -1,0 +1,100 @@
+---
+import screenPermapages from "../images/screenshot/use/permapages.png";
+import screenPioneers from "../images/screenshot/use/pioneers.png";
+import screenPermacast from "../images/screenshot/use/permacast.png";
+import screenArweavenews from "../images/screenshot/use/arweavenews.png";
+import screenList from "../images/screenshot/use/arweavelists.png";
+import screenEvents from "../images/screenshot/use/arweaveevents.png";
+import screenArwiki from "../images/screenshot/use/arwiki.png";
+import screenArio from "../images/screenshot/use/ario.png";
+import Container from "../components/Container.astro";
+import Resource from "../components/Resource.astro";
+import TrustedBy from "../components/TrustedBy.astro";
+import Layout from "../layouts/Layout.astro";
+import { NavBar } from "../components/NavBar";
+
+const resources = [
+  // Use Arweave
+  [
+    {
+      title: "Unleash the power of the permanent web.",
+      link: "https://ar.io",
+      screenshot: screenArio,
+    },
+    {
+      title: "Make your homepage on the permaweb",
+      link: "https://permapages.app/",
+      screenshot: screenPermapages,
+    },
+    {
+      title: "Arweave Events",
+      link: "https://arweave.events",
+      screenshot: screenEvents,
+    },
+    {
+      title: "Explore the wiki",
+      link: "https://arwiki.wiki/",
+      screenshot: screenArwiki,
+    },
+  ],
+  // Learn More
+  [
+    {
+      title: "Check out the latest on Arweave.news",
+      link: "https://permaweb.news/",
+      screenshot: screenArweavenews,
+    },
+    {
+      title: "Podcast: Permaweb Pioneers",
+      link: "https://permaweb-pioneers.simplecast.com/",
+      screenshot: screenPioneers,
+    },
+    {
+      title: "Podcast: Permacast",
+      link: "https://legacy.permacast.dev/#/podcasts/rBIQpWeYcf0_reltNXTKjjEUHlQRL9CmZCNcgYjZaao",
+      screenshot: screenPermacast,
+    },
+    {
+      title: "Explore the ecosystem",
+      link: "https://list.weavescan.com/",
+      screenshot: screenList,
+    },
+  ],
+];
+---
+
+<Layout title="Use Arweave">
+  <section id="use" aria-label="Use Arweave">
+    <Container className="relative z-10">
+      <div class="mx-auto lg:mx-0 lg:pr-24">
+        <h2 class="font-display text-4xl tracking-tighter sm:text-5xl">
+          Use Arweave.
+        </h2>
+        <div class="mt-4 font-display text-xl tracking-tight">
+          <p class="mt-4">
+            Arweave is being used in countless different ways. Take your first
+            steps with the power of permanent data storage by uploading a file,
+            making your own homepage on the permaweb or simply learning more
+            about Arweave and its ecosystem.
+          </p>
+        </div>
+      </div>
+
+      <h2 class="pt-8 font-display text-3xl tracking-tighter sm:text-3xl">
+        Get Started.
+      </h2>
+      <div class="mx-auto">
+        <Resource resources={resources[0]} />
+      </div>
+      <h2 class="pt-5 font-display text-3xl tracking-tighter sm:text-3xl">
+        Dive Deep.
+      </h2>
+      <div class="mx-auto">
+        <Resource resources={resources[1]} />
+      </div>
+    </Container>
+  </section>
+  <TrustedBy />
+
+  <NavBar currentPathname="/use" client:load />
+</Layout>
