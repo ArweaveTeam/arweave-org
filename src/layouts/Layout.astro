@@ -1,50 +1,76 @@
 ---
+import Container from "../components/Container.astro";
+import CookieBanner from "../components/CookieBanner";
+import Header from "../components/Header.astro";
+
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html class="bg-white antialiased" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Arweave is a global, permissionless hard drive that stores data permanently and incentivizes nodes to keep it. Learn about its unique proof of access mechanism, tokenomic endowment model, and the services and applications that sit on top of it."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon-183x183.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="relative pb-20 pt-10 sm:py-10">
+        <div class="absolute inset-x-0 -bottom-14 -top-48 overflow-hidden">
+          <div
+            class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white"
+          >
+          </div>
+          <div
+            class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white"
+          >
+          </div>
+        </div>
+        <Container className="relative">
+          <CookieBanner client:load />
+          <slot />
+        </Container>
+      </div>
+    </main>
+  </body>
 </html>
+
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&family=Roboto+Mono:wght@400;700&display=swap");
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  div.resources {
+    @apply my-auto mt-5 flex flex-wrap items-center justify-center rounded-md bg-gray-300 p-5;
+  }
+
+  a.resource {
+    @apply flex-auto px-2 text-center align-middle  font-mono transition duration-300 ease-in-out;
+  }
+
+  a.resource > img {
+    @apply inline-block h-auto w-auto align-middle;
+  }
+
+  a.text-link {
+    @apply font-sans text-2xl font-bold;
+  }
+  a.text-link:hover {
+    @apply border-b-2 border-gray-400;
+  }
+  .btn {
+    @apply inline-block rounded-xl bg-gray-900 px-5 py-1 text-center text-white;
+  }
 </style>
