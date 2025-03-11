@@ -86,11 +86,17 @@ export function NavBar({ currentPathname }) {
               {sections.map((section) => (
                 <Popover.Button
                   key={section.id}
-                  href={`${section.id}`}
                   className="flex items-center px-4 py-1.5"
                   onClick={() => {
-                    setIsOpen(!isOpen)
-                  }}
+                    setIsOpen(false)
+                    // go to link
+                    if (section.id !== currentPathname) {
+                      window.location.href
+                        ? window.location.href = section.id
+                        : window.location.pathname = section.id
+                    }
+                  }
+                  }
                 >
                   <span
                     className={clsx(
