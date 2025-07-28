@@ -7,7 +7,6 @@
     "dev": "astro dev",
     "start": "http-server dist",
     "build": "astro check && astro build",
-    "postbuild": "for dir in funding use build; do mv dist/$dir/index.html dist/$dir.html && rm -r dist/$dir; done",
     "preview": "astro preview",
     "astro": "astro",
     "deploy": "DEPLOY_KEY=$(base64 -i jwk.json) permaweb-deploy --arns-name ar -t 60",

@@ -4,9 +4,9 @@ import clsx from 'clsx'
 
 const sections = [
   { id: '/', title: 'Discover.', icon: '🏠' },
-  { id: '/use.html', title: 'Use.', icon: '👤' },
-  { id: '/build.html', title: 'Build.', icon: '</>' },
-  { id: '/funding.html', title: 'Get Funded.', icon: '$' },
+  { id: '/use/index.html', title: 'Use.', icon: '👤' },
+  { id: '/build/index.html', title: 'Build.', icon: '</>' },
+  { id: '/funding/index.html', title: 'Get Funded.', icon: '$' },
 ]
 
 function MenuIcon({ open, ...props }) {
