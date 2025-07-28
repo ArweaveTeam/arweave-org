@@ -8,7 +8,9 @@
     "start": "http-server dist",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "DEPLOY_KEY=$(base64 -i jwk.json) permaweb-deploy --arns-name ar -t 60",
+    "balance": "curl -s https://payment.ardrive.io/v1/balance?address=Qa8AAZv-sEhQRIm7xZr3CVLtlzIH8NezaY0GZhURcAc  | jq '.effectiveBalance | tonumber / 1e12'"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -19,6 +21,7 @@
     "@types/react-dom": "^18.3.7",
     "astro": "^5.12.3",
     "http-server": "^14.1.1",
+    "permaweb-deploy": "^2.4.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwindcss": "^3.4.15",
