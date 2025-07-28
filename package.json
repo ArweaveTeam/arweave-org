@@ -28,5 +28,8 @@
     "react-dom": "^18.3.1",
     "tailwindcss": "^3.4.15",
     "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "terser": "^5.36.0"
   }
 }
