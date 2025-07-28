@@ -4,9 +4,9 @@ import clsx from 'clsx'
 
 const sections = [
   { id: '/', title: 'Discover.', icon: '🏠' },
-  { id: '/use', title: 'Use.', icon: '👤' },
-  { id: '/build', title: 'Build.', icon: '</>' },
-  { id: '/funding', title: 'Get Funded.', icon: '$' },
+  { id: '/use.html', title: 'Use.', icon: '👤' },
+  { id: '/build.html', title: 'Build.', icon: '</>' },
+  { id: '/funding.html', title: 'Get Funded.', icon: '$' },
 ]
 
 function MenuIcon({ open, ...props }) {
@@ -52,7 +52,7 @@ export function NavBar({ currentPathname }) {
               className={clsx(
                 'relative flex items-center px-4 py-3',
                 !open &&
-                  'bg-white/95 shadow-sm [@supports(backdrop-filter:blur(0))]:bg-white/80 [@supports(backdrop-filter:blur(0))]:backdrop-blur',
+                'bg-white/95 shadow-sm [@supports(backdrop-filter:blur(0))]:bg-white/80 [@supports(backdrop-filter:blur(0))]:backdrop-blur',
                 open && ' open'
               )}
             >
