@@ -11,6 +11,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "deploy": "DEPLOY_KEY=$(base64 -i jwk.json) permaweb-deploy --arns-name ar -t 60",
+    "test-deploy": "DEPLOY_KEY=$(base64 -i jwk.json) permaweb-deploy --arns-name ar -t 60 --undername test",
     "balance": "curl -s https://payment.ardrive.io/v1/balance?address=Qa8AAZv-sEhQRIm7xZr3CVLtlzIH8NezaY0GZhURcAc  | jq '.effectiveBalance | tonumber / 1e12'"
   },
   "dependencies": {
