@@ -4,9 +4,8 @@ import logoDha from "../images/logos/dha.png";
 import logoForward from "../images/logos/forward.png";
 import logoHansa from "../images/logos/hansa.svg";
 import logoPermadao from "../images/logos/permadao.png";
-import logoPermaventures from "../images/logos/permaventures.png";
 import logoLongview from "../images/logos/longview.png";
-import logoArweaveasia from "../images/logos/arweaveasia.png";
+import logoOnboard from "../images/logos/onboard.png";
 import Layout from "../layouts/Layout.astro";
 import Container from "../components/Container.astro";
 import ResourceList from "../components/ResourceList.astro";
@@ -14,9 +13,9 @@ import { NavBar } from "../components/NavBar";
 
 const resources = [
   {
-    title: "Permanent Ventures",
-    link: "https://twitter.com/permanentvc",
-    logo: logoPermaventures,
+    title: "Onboard",
+    link: "https://onboard.arweave.net",
+    logo: logoOnboard,
   },
   {
     title: "PermaDAO",
@@ -34,18 +33,13 @@ const resources = [
     logo: logoDha,
   },
   {
-    title: "Arweave Asia Fund",
-    link: "https://arscp.ventures/",
-    logo: logoArweaveasia,
-  },
-  {
     title: "Community Labs",
     link: "https://communitylabs.com/",
     logo: logoCommunitylabs,
   },
   {
     title: "Forward Research",
-    link: "https://fwd.arweave.dev/",
+    link: "https://fwd.arweave.net/",
     logo: logoForward,
   },
   {
@@ -53,7 +47,7 @@ const resources = [
     link: "https://www.hansa.network/",
     logo: logoHansa,
   },
-].sort((a, b) => a.title.localeCompare(b.title));
+]; //.sort((a, b) => a.title.localeCompare(b.title));
 ---
 
 <Layout title="Arweave: Get Funded">
@@ -84,5 +78,5 @@ const resources = [
       </div>
     </Container>
   </section>
-  <NavBar currentPathname="/funding" client:load />
+  <NavBar currentPathname="/funding/index.html" client:load />
 </Layout>
