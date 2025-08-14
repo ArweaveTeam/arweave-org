@@ -1,40 +1,42 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
-import { NavBar } from "../components/NavBar";
+import TxnTable from "../components/TxnTable.jsx";
 ---
 
 <Layout title="Arweave - A community-driven ecosystem">
   <main>
-    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <h1 class="font-display text-5xl tracking-tighter sm:text-6xl">
-        Meet Arweave:
-        <br />
-        Permanent information storage.
-      </h1>
-      <div class="mt-20 font-sans text-xl tracking-tight">
-        <p>
-          The Arweave network is like Bitcoin, but for data: A permanent and
-          decentralized web inside an open ledger.
+    <div class="grid grid-cols-1 lg:grid-cols-2 items-center justify-center">
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h1 class="font-display text-6xl tracking-tighter sm:text-6xl">
+          Arweave.
+        </h1>
+        <p class="mt-2 font-display text-2xl tracking-tight text-gray-900">
+          Permanent information storage.
         </p>
-        <p class="pt-4">
-          Permanent storage has many applications: from the preservation of
-          humanity&apos;s most important data, to the hosting of truly
-          decentralized and provably neutral web apps.
-        </p>
-        <p class="pt-4">
-          The Arweave protocol is stable, mature and widely adopted. As such,
-          its ecosystem is fully decentralized. This site is just the tip of the
-          iceberg. It acts as a map that points you to places you can learn
-          about, use and build on Arweave.
-        </p>
-        <p class="pt-4">
-          Dive in! The rabbit hole is deep, and the possibilities are endless.
-        </p>
+        <div class="mt-20 font-sans text-xl tracking-tight">
+          <p>
+            The Arweave network is like Bitcoin, but for data: A permanent and
+            decentralized web inside an open ledger.
+          </p>
+          <p class="pt-4">
+            The Arweave protocol is stable, mature and widely adopted. As such,
+            its ecosystem is fully decentralized. This site is just the tip of
+            the iceberg. It acts as a map that points you to places you can
+            learn about, use and build on Arweave.<br /> Dive in! The rabbit hole
+            is deep, and the possibilities are endless.
+          </p>
+          <p class="pt-4">
+            Permanent storage has many applications: from the preservation of
+            humanity's most important data, to the hosting of truly
+            decentralized and provably neutral web apps.
+          </p>
+        </div>
+      </div>
+      <div class="px-4 lg:px-0 mt-auto">
+        <TxnTable client:load />
       </div>
     </div>
-    <Footer />
   </main>
-
-  <NavBar currentPathname="/" client:load />
+  <Footer />
 </Layout>

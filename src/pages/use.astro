@@ -1,100 +1,217 @@
 ---
-import screenPermapages from "../images/screenshot/use/permapages.png";
-import screenPioneers from "../images/screenshot/use/pioneers.png";
-import screenPermacast from "../images/screenshot/use/permacast.png";
-import screenPermawebJournal from "../images/screenshot/use/permawebjournal.png";
-import screenList from "../images/screenshot/use/arweavelists.png";
-import screenWeekly from "../images/screenshot/use/arweaveweekly.png";
-import screenArwiki from "../images/screenshot/use/arwiki.png";
-import screenArio from "../images/screenshot/use/ario.png";
-import Container from "../components/Container.astro";
-import Resource from "../components/Resource.astro";
-import TrustedBy from "../components/TrustedBy.astro";
 import Layout from "../layouts/Layout.astro";
-import { NavBar } from "../components/NavBar";
-
-const resources = [
-  // Use Arweave
-  [
-    {
-      title: "Unleash the power of the permanent web.",
-      link: "https://ar.io",
-      screenshot: screenArio,
-    },
-    {
-      title: "Make your homepage on the permaweb",
-      link: "https://permapages.app/",
-      screenshot: screenPermapages,
-    },
-    {
-      title: "Arweave Weekly News",
-      link: "https://arweavehub.com/weekly",
-      screenshot: screenWeekly,
-    },
-    {
-      title: "Explore the wiki",
-      link: "https://arwiki.wiki/",
-      screenshot: screenArwiki,
-    },
-  ],
-  // Learn More
-  [
-    {
-      title: "Onchain publication and knowledge hub",
-      link: "https://permaweb-journal.arweave.net/",
-      screenshot: screenPermawebJournal,
-    },
-    {
-      title: "Podcast: Permaweb Pioneers",
-      link: "https://permaweb-pioneers.simplecast.com/",
-      screenshot: screenPioneers,
-    },
-    {
-      title: "Podcast: Permacast",
-      link: "https://www.permacast.app/",
-      screenshot: screenPermacast,
-    },
-    {
-      title: "Explore the ecosystem",
-      link: "https://list.weavescan.com/",
-      screenshot: screenList,
-    },
-  ],
-];
+import Container from "../components/Container.astro";
+import TrustedBy from "../components/TrustedBy.astro";
 ---
 
 <Layout title="Use Arweave">
   <section id="use" aria-label="Use Arweave">
     <Container className="relative z-10">
-      <div class="mx-auto lg:mx-0 lg:pr-24">
-        <h2 class="font-display text-4xl tracking-tighter sm:text-5xl">
-          Use Arweave.
-        </h2>
-        <div class="mt-4 font-display text-xl tracking-tight">
+      <!-- Main Title Section -->
+      <div class="mx-auto lg:mx-0 lg:pr-24 text-center lg:text-left">
+        <h1
+          class="font-display text-4xl tracking-tighter sm:text-5xl font-bold text-black"
+        >
+          Store data permanently.
+        </h1>
+        <div class="mt-4 font-display text-xl tracking-tight text-black">
           <p class="mt-4">
-            Arweave is being used in countless different ways. Take your first
-            steps with the power of permanent data storage by uploading a file,
-            making your own homepage on the permaweb or simply learning more
-            about Arweave and its ecosystem.
+            Whether its a personal photo or preservation of humanity's most
+            important data try it out with the hosting of truly decentralized
+            and provably neutral web apps.
           </p>
         </div>
       </div>
 
-      <h2 class="pt-8 font-display text-3xl tracking-tighter sm:text-3xl">
-        Get Started.
-      </h2>
-      <div class="mx-auto">
-        <Resource resources={resources[0]} />
+      <!-- Navigation Tabs -->
+      <div class="mt-8 flex justify-center lg:justify-start">
+        <div class="flex border-b-2 border-orange-500 w-full max-w-md">
+          <button
+            class="flex-1 py-2 px-4 text-orange-500 font-medium border-b-2 border-orange-500"
+          >
+            Step 1: Upload your file.
+          </button>
+          <button class="flex-1 py-2 px-4 text-gray-600 font-medium">
+            Step 2: Access your file.
+          </button>
+        </div>
       </div>
-      <h2 class="pt-5 font-display text-3xl tracking-tighter sm:text-3xl">
-        Dive Deep.
-      </h2>
-      <div class="mx-auto">
-        <Resource resources={resources[1]} />
+
+      <!-- Step 1: Upload Section -->
+      <div class="mt-8">
+        <h2 class="font-display text-2xl font-bold text-black mb-4">
+          Step 1: Upload your file.
+        </h2>
+        <p class="text-black mb-6">
+          You can upload your file for free and access it immediately after.
+          Make sure its under 100kb.
+        </p>
+
+        <!-- Drag and Drop Area -->
+        <div
+          class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-orange-500 transition-colors"
+        >
+          <div class="flex flex-col items-center">
+            <!-- Upload Icon -->
+            <div
+              class="w-16 h-16 bg-orange-500 rounded-lg flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                ></path>
+              </svg>
+            </div>
+            <p class="text-black font-medium">Drag and Drop</p>
+            <p class="text-gray-500 text-sm">Under &lt;100kb</p>
+            <p class="mt-4 text-black">
+              or <span class="text-orange-500 underline cursor-pointer"
+                >choose file</span
+              > to upload
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Access Section -->
+      <div class="mt-12">
+        <h2 class="font-display text-2xl font-bold text-black mb-4">
+          Step 2: Access your file.
+        </h2>
+        <p class="text-black mb-6">
+          Once your file is uploaded, you can easily access it through the
+          Wayfinder protocol on Arweave.
+        </p>
+
+        <!-- File Uploaded Confirmation -->
+        <div
+          class="border border-gray-200 rounded-lg p-8 text-center bg-gray-50"
+        >
+          <div class="flex flex-col items-center">
+            <!-- Success Icon -->
+            <div
+              class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <p class="text-black font-medium mb-2">File Uploaded</p>
+            <a href="#" class="text-orange-500 underline font-medium mb-4"
+              >View your file on Arweave</a
+            >
+            <div class="text-sm text-black space-y-1">
+              <p>Address: H99999ERL1TE00CJ00ZDW999GA1RZR00YTPES00R03eJI</p>
+              <p>Size: 128kb File Type: mp4</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arweave Description Section -->
+      <div class="mt-16 text-center lg:text-left">
+        <h2
+          class="font-display text-4xl tracking-tighter sm:text-5xl font-bold text-black mb-6"
+        >
+          Arweave is the world's data layer.
+        </h2>
+        <div class="font-display text-xl tracking-tight text-black">
+          <p class="mt-4">
+            Unlike traditional blockchains built for transactions, Arweave's
+            novel blockweave protocol was designed from the ground up as the
+            web's permanent data layer. With a single upfront fee, you can store
+            data indefinitely that is tamper-proof, censorship-resistant, and
+            always accessible. Below are some ways to dive in.
+          </p>
+        </div>
+      </div>
+
+      <!-- Upload Tutorial Section -->
+      <div class="mt-16 text-center lg:text-left">
+        <h2 class="font-display text-2xl font-bold text-black mb-4">
+          Upload Tutorial.
+        </h2>
+        <p class="text-black mb-6">
+          You can upload your file for free and access it immediately after.
+        </p>
+
+        <!-- Call to Action Button -->
+        <div class="flex flex-col sm:flex-row items-center gap-4">
+          <button
+            class="border-2 border-orange-500 bg-white text-orange-500 px-6 py-3 rounded-lg font-medium hover:bg-orange-500 hover:text-white transition-colors flex items-center gap-2"
+          >
+            Start Storing Files
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 4v16m8-8H4"></path>
+            </svg>
+          </button>
+
+          <!-- Icons -->
+          <div class="flex gap-4">
+            <div
+              class="w-8 h-8 bg-black rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-4 h-4 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                ></path>
+              </svg>
+            </div>
+            <div
+              class="w-8 h-8 bg-black rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-4 h-4 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"></path>
+              </svg>
+            </div>
+            <div
+              class="w-8 h-8 bg-black rounded-full flex items-center justify-center"
+            >
+              <span class="text-white text-xs font-bold">a</span>
+            </div>
+          </div>
+        </div>
       </div>
     </Container>
   </section>
   <TrustedBy />
-
-  <NavBar currentPathname="/use" client:load />
 </Layout>

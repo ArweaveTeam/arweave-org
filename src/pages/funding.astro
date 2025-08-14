@@ -9,7 +9,6 @@ import logoOnboard from "../images/logos/onboard.png";
 import Layout from "../layouts/Layout.astro";
 import Container from "../components/Container.astro";
 import ResourceList from "../components/ResourceList.astro";
-import { NavBar } from "../components/NavBar";
 
 const resources = [
   {
@@ -78,5 +77,4 @@ const resources = [
       </div>
     </Container>
   </section>
-  <NavBar currentPathname="/funding" client:load />
 </Layout>

@@ -73,4 +73,17 @@ const { title } = Astro.props;
   .btn {
     @apply inline-block rounded-xl bg-gray-900 px-5 py-1 text-center text-white;
   }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #f66700;
+  }
 </style>

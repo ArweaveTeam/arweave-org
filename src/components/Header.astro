@@ -1,16 +1,47 @@
 ---
 import Container from "./Container.astro";
 import Logo from "./Logo.astro";
+const currentPathname = Astro.url.pathname;
+const links = [
+  { href: "/", label: "Home." },
+  { href: "/use/", label: "Use." },
+  { href: "/build/", label: "Build." },
+  { href: "/discover/", label: "Discover." },
+  { href: "/funding/", label: "Get Funded." },
+];
 ---
 
-<header class="relative z-50 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lg:pt-4">
+<header class="relative z-50 mx-auto max-w-[90vw] px-4 sm:px-6 lg:px-8 lg:pt-4">
   <Container
-    className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center sm:justify-between lg:flex-nowrap"
+    className="mx-auto px-4 max-w-[90vw] sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between"
   >
-    <div class="mt-10 lg:mt-0 lg:grow lg:basis-0 xl:mt-10">
+    <div class="mt-10">
       <a href="/" class="inline-block">
         <Logo />
       </a>
     </div>
+    <nav class="mt-6">
+      <ul
+        class="flex mx-auto items-center space-x-2 md:space-x-5 text-base font-display whitespace-nowrap"
+      >
+        {
+          links.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class:list={[
+                  "font-mono px-2 py-1 transition-colors",
+                  currentPathname === link.href
+                    ? "bg-orange text-white"
+                    : "text-gray-900 hover:text-orange",
+                ]}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
   </Container>
 </header>
