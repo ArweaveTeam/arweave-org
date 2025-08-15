@@ -11,16 +11,16 @@ const links = [
 ];
 ---
 
-<header class="relative z-50 mx-auto max-w-[90vw] px-4 sm:px-6 lg:px-8 lg:pt-4">
+<header class="relative z-50 mx-auto max-w-[90vw]">
   <Container
-    className="mx-auto px-4 max-w-[90vw] sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between"
+    className="mx-auto px-4 max-w-[90vw] flex flex-col lg:flex-row items-center justify-between py-8"
   >
-    <div class="mt-10">
+    <div class="">
       <a href="/" class="inline-block">
         <Logo />
       </a>
     </div>
-    <nav class="mt-6">
+    <nav class="">
       <ul
         class="flex mx-auto items-center space-x-2 md:space-x-5 text-base font-display whitespace-nowrap"
       >
@@ -30,7 +30,7 @@ const links = [
               <a
                 href={link.href}
                 class:list={[
-                  "font-mono px-2 py-1 transition-colors",
+                  "font-mono px-2 py-1 transition-colors text-sm",
                   currentPathname === link.href
                     ? "bg-orange text-white"
                     : "text-gray-900 hover:text-orange",
