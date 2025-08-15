@@ -6,7 +6,9 @@ import TxnTable from "../components/TxnTable.jsx";
 
 <Layout title="Arweave - A community-driven ecosystem">
   <main>
-    <div class="grid grid-cols-1 lg:grid-cols-2 items-center justify-center">
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 items-start justify-center gap-8"
+    >
       <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h1 class="font-display text-6xl tracking-tighter sm:text-6xl">
           Arweave.
@@ -33,7 +35,9 @@ import TxnTable from "../components/TxnTable.jsx";
           </p>
         </div>
       </div>
-      <div class="px-4 lg:px-0 mt-auto">
+      <div
+        class="px-4 lg:px-0 flex flex-col items-center justify-center min-h-full"
+      >
         <TxnTable client:load />
       </div>
     </div>
