@@ -1,80 +1,11 @@
 ---
-import logoCommunitylabs from "../images/logos/communitylabs.svg";
-import logoDha from "../images/logos/dha.png";
-import logoForward from "../images/logos/forward.png";
-import logoHansa from "../images/logos/hansa.svg";
-import logoPermadao from "../images/logos/permadao.png";
-import logoLongview from "../images/logos/longview.png";
-import logoOnboard from "../images/logos/onboard.png";
 import Layout from "../layouts/Layout.astro";
 import Container from "../components/Container.astro";
 import ResourceList from "../components/ResourceList.astro";
-
-const resources = [
-  {
-    title: "Onboard",
-    link: "https://onboard.arweave.net",
-    logo: logoOnboard,
-  },
-  {
-    title: "PermaDAO",
-    link: "https://permadao.notion.site/",
-    logo: logoPermadao,
-  },
-  {
-    title: "Longview Labs",
-    link: "https://www.longviewlabs.co/",
-    logo: logoLongview,
-  },
-  {
-    title: "Digital History Association",
-    link: "https://dha.arweave.dev/",
-    logo: logoDha,
-  },
-  {
-    title: "Community Labs",
-    link: "https://communitylabs.com/",
-    logo: logoCommunitylabs,
-  },
-  {
-    title: "Forward Research",
-    link: "https://fwd.arweave.net/",
-    logo: logoForward,
-  },
-  {
-    title: "Hansa",
-    link: "https://www.hansa.network/",
-    logo: logoHansa,
-  },
-]; //.sort((a, b) => a.title.localeCompare(b.title));
 ---
 
 <Layout title="Arweave: Get Funded">
   <section id="fund" aria-label="Get Funded">
-    <Container className="relative z-10 ">
-      <div class="mx-auto lg:mx-0 lg:pr-24">
-        <h2 class="font-display text-4xl tracking-tighter sm:text-5xl">
-          Get Funded.
-        </h2>
-        <div class="font-display text-xl tracking-tight">
-          <p class="mt-4">
-            Arweave is a fully decentralized ecosystem. There are numerous
-            dedicated organizations – ranging from non-profits, to DAOs and
-            venture studios – that back its development and help the ecosystem
-            grow. Many of these organizations have grant and investment
-            opportunities available for those contributing to the Arweave
-            ecosystem.
-          </p>
-          <p class="mt-4">
-            Thinking of building a project on Arweave? Start building, reach
-            out, get funded!
-          </p>
-        </div>
-      </div>
-
-      <div class="mx-auto mt-20 ms:mb-20">
-        <ResourceList resources={resources} />
-      </div>
-    </Container>
+    <Container className="relative z-10 "> Get Funded. </Container>
   </section>
 </Layout>
