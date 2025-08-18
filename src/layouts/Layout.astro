@@ -1,6 +1,7 @@
 ---
 import Container from "../components/Container.astro";
 import CookieBanner from "../components/CookieBanner";
+
 import Header from "../components/Header.astro";
 
 interface Props {
@@ -26,23 +27,14 @@ const { title } = Astro.props;
   <body>
     <Header />
     <main>
-      <div class="relative pb-20 pt-10 sm:py-10">
-        <div class="absolute inset-x-0 -bottom-14 -top-48 overflow-hidden">
-          <div
-            class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white"
-          >
-          </div>
-          <div
-            class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white"
-          >
-          </div>
-        </div>
+      <div class="relative pb-20 pt-10 sm:py-24">
         <Container className="relative">
           <CookieBanner client:load />
           <slot />
         </Container>
       </div>
     </main>
+
   </body>
 </html>
 

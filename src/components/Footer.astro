@@ -2,21 +2,22 @@
 import Container from "./Container.astro";
 ---
 
-<footer class="mx-auto py-24 sm:pb-10">
-  <Container className="flex flex-col items-center justify-between lg:flex-row">
-    <p class="text-slate-500 mt-6 text-base lg:mt-0">
+<footer class="fixed bottom-0 left-0 right-0 mx-auto py-12 sm:pb-10">
+  <Container className="flex flex-col items-center justify-between lg:flex-row max-w-[90vw] mt-6 text-footer1 lg:mt-0 text-secondaryLight2">
+    <p>
       &copy; MIT License {new Date().getFullYear()}. Got something to add?
       <a
         href="https://github.com/arweaveteam/arweave-org"
         target="_blank"
         rel="noreferrer"
-        class="underline">Send a PR.</a
-      > | <a href="/legal-policies" class="underline"> Legal policies.</a> | <a
-        href="/brand-kit"
-        class="underline"
-      >
-        Brand Kit.</a
-      >
+        class="underline text-footer2 text-secondaryLight4">Send a PR.</a
+      > 
     </p>
+    <p><a href="/legal-policies" class="underline"> Legal policies.</a> | <a
+      href="/brand-kit"
+      class="underline"
+    >
+      Brand Kit.</a
+    ></p>
   </Container>
 </footer>

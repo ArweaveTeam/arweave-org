@@ -374,7 +374,9 @@ export default function TxnTable() {
     return (
       <div className="w-full h-full flex items-center justify-center">
         <div className="text-center py-8">
-          <div className="text-gray-500 text-lg">Loading transactions...</div>
+          {/* 
+          // Hiding loading because it is too distracting.
+          <div className="text-gray-500">Loading transactions...</div> */}
         </div>
       </div>
     );
@@ -384,7 +386,7 @@ export default function TxnTable() {
     return (
       <div className="w-full h-full flex items-center justify-center">
         <div className="text-center py-8">
-          <div className="text-red-500 text-lg mb-4">{error}</div>
+          <div className="text-red-500 mb-4">{error}</div>
           <button 
             onClick={() => {
               setError(null);
@@ -449,7 +451,7 @@ export default function TxnTable() {
   }
 
   return (
-    <div className="w-full mt-auto mb-6">
+    <div className="w-full mt-auto mb-6 text-xxs">
       {/* Mobile view - stacked cards */}
       <div className="block lg:hidden space-y-3">
         {txns.map((txn, i) => {
@@ -457,7 +459,7 @@ export default function TxnTable() {
           const isEdge = i === 0 || i === total - 1;
           const isNearEdge = i === 1 || i === total - 2;
 
-          const classes = ['bg-white rounded-lg border border-gray-200 p-4 hover:border-orange-300 transition-all duration-300'];
+          const classes = ['bg-white border-b border-gray-100 p-4 hover:border-orange-300 transition-all duration-300'];
 
           if(isEdge) classes.push('opacity-40', 'blur-[1px]');
           if(isNearEdge) classes.push('opacity-80', 'blur-[0.5px]');
@@ -471,21 +473,17 @@ export default function TxnTable() {
               onClick={() => window.open(`https://arweave.net/${txn.id}`, '_blank')}
             >
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs text-gray-500">{tsToRelativeTime(txn.timestamp, currentTime)}</span>
-                <span className={`text-xs px-2 py-1 rounded-full ${
-                  txn.status === 'pending' 
-                    ? 'bg-yellow-100 text-yellow-800' 
-                    : 'bg-green-100 text-green-800'
-                }`}>
+                <span className="text-gray-500">{tsToRelativeTime(txn.timestamp, currentTime)}</span>
+                <span className={`px-2 py-1`}>
                   {txn.status === 'pending' ? 'Pending' : 'Mined'}
                 </span>
               </div>
               
-              <div className="font-mono text-orange text-sm mb-2">
+              <div className="font-mono text-orange mb-2">
                 {txn.id.slice(0, 12)}...{txn.id.slice(-12)}
               </div>
               
-              <div className="text-xs text-gray-600">
+              <div className="text-gray-600">
                 Size: {formatSize(txn.size)}
               </div>
             </div>
@@ -494,17 +492,8 @@ export default function TxnTable() {
       </div>
 
       {/* Desktop view - table */}
-      <div className="hidden lg:block overflow-x-auto">
-        <table className="min-w-full table-fixed">
-          <thead>
-            <tr className="text-xs uppercase tracking-wider text-gray-400">
-              {/* <th className="py-2 px-4 text-right font-display font-normal">Block</th> */}
-              <th className="py-2 px-4 text-left font-display font-normal">Transaction</th>
-              <th className="py-2 px-4 text-right font-display font-normal">Size</th>
-              <th className="py-2 px-4 text-right font-display font-normal">Status</th>
-              <th className="py-2 px-4 text-right font-display font-normal">When</th>
-            </tr>
-          </thead>
+      <div className="hidden lg:block overflow-x-auto text-xxs">
+        <table className="min-w-full table-fixed border-separate border-spacing-y-2">
           <tbody
             ref={tbodyRef}
             style={{
@@ -535,22 +524,18 @@ export default function TxnTable() {
                   {/* <td className="py-3 px-4 text-right font-mono text-gray-500">
                     {txn.status === 'mined' && txn.blockHeight ? txn.blockHeight : '—'}
                   </td> */}
-                  <td className="py-3 pl-4 font-mono text-orange">
+                  <td className="py-3 pl-4 font-mono text-orange text-left w-1/4">
                     <div className="flex items-center gap-2">
                       <span>{txn.id.slice(0, 10)}...{txn.id.slice(-10)}</span>
                     </div>
                   </td>
-                  <td className="py-3 px-4 text-right font-mono text-gray-900">{formatSize(txn.size)}</td>
-                  <td className="py-3 px-4 text-right">
-                    <span className={`text-xs px-2 py-1 rounded-full ${
-                      txn.status === 'pending' 
-                        ? 'bg-yellow-100 text-yellow-800' 
-                        : 'bg-green-100 text-green-800'
-                    }`}>
+                  <td className="py-3 px-4 text-right font-mono text-gray-900 w-1/4">{formatSize(txn.size)}</td>
+                  <td className="py-3 px-4 text-right w-1/4">
+                    <span className={`px-2 py-1`}>
                       {txn.status === 'pending' ? 'Pending' : 'Mined'}
                     </span>
                   </td>
-                  <td className="py-3 px-4 text-right text-gray-500">{tsToRelativeTime(txn.timestamp, currentTime)}</td>
+                  <td className="py-3 px-4 text-right text-gray-500 w-1/4">{tsToRelativeTime(txn.timestamp, currentTime)}</td>
                 </tr>
               );
             })}

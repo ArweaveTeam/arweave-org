@@ -11,9 +11,9 @@ const links = [
 ];
 ---
 
-<header class="relative z-50 mx-auto max-w-[90vw]">
+<header class="relative z-50 mx-auto max-w-main">
   <Container
-    className="mx-auto px-4 max-w-[90vw] flex flex-col lg:flex-row items-center justify-between py-8"
+    className="mx-auto px-4 flex flex-col lg:flex-row items-center justify-between py-8"
   >
     <div class="">
       <a href="/" class="inline-block">
@@ -22,7 +22,7 @@ const links = [
     </div>
     <nav class="">
       <ul
-        class="flex mx-auto items-center space-x-2 md:space-x-5 text-base font-display whitespace-nowrap"
+        class="flex mx-auto items-center space-x-2 md:space-x-5 text-base font-mono whitespace-nowrap"
       >
         {
           links.map((link) => (
