@@ -1,11 +1,109 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Container from "../components/Container.astro";
-import ResourceList from "../components/ResourceList.astro";
 ---
 
 <Layout title="Arweave: Get Funded">
-  <section id="fund" aria-label="Get Funded">
-    <Container className="relative z-10 "> Get Funded. </Container>
+  <section id="fund" aria-label="Get Funded" class="relative z-10 pb-12">
+    <!-- Kicker -->
+    <div class="text-kicker font-mono">Get Funded.</div>
+
+    <!-- Headline -->
+    <h1 class="text-h1 lg:text-[56px] font-sans mt-2">Funding the next generation of founders.</h1>
+
+    <!-- Paragraph -->
+    <p class="text-p2 font-sans mt-3 max-w-4xl text-secondaryLight4">
+      Arweave is a fully decentralized ecosystem. There are numerous dedicated organizations – ranging from non-profits,
+      to DAOs and venture studios – that back its development and help the ecosystem grow. Many of these organizations have
+      grant and investment opportunities available for those contributing to the Arweave ecosystem.
+    </p>
+
+    <!-- Top row: 3 orgs -->
+    <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Onboard -->
+      <article class="border border-gray-200 p-6 bg-white">
+        <div class="h-8 w-32 bg-gray-100 mb-4"></div>
+        <h3 class="text-h4 font-sans">Onboard.</h3>
+        <p class="text-p3 font-sans mt-2 text-secondaryLight4">
+          Store any quantity and type of data permanently and for a single payment.
+        </p>
+        <a href="#" class="mt-4 inline-block bg-orange text-white px-4 py-2 font-mono">Fund Your Data Storage →</a>
+      </article>
+
+      <!-- Community Labs -->
+      <article class="border border-gray-200 p-6 bg-white">
+        <div class="h-8 w-40 bg-gray-100 mb-4"></div>
+        <h3 class="text-h4 font-sans">Community Labs.</h3>
+        <p class="text-p3 font-sans mt-2 text-secondaryLight4">
+          Fueling the people and technologies redefining the decentralized future.
+        </p>
+        <a href="#" class="mt-4 inline-block bg-orange text-white px-4 py-2 font-mono">Fund Your Innovation →</a>
+      </article>
+
+      <!-- Digital History Association -->
+      <article class="border border-gray-200 p-6 bg-white">
+        <div class="h-8 w-48 bg-gray-100 mb-4"></div>
+        <h3 class="text-h4 font-sans">Digital History Association.</h3>
+        <p class="text-p3 font-sans mt-2 text-secondaryLight4">
+          Perform research on the core Arweave protocol and recommend improvements.
+        </p>
+        <a href="#" class="mt-4 inline-block bg-orange text-white px-4 py-2 font-mono">Fund Your Protocol Research →</a>
+      </article>
+    </div>
+
+    <!-- Middle row: 3 orgs -->
+    <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Forward Research -->
+      <article class="border border-gray-200 p-6 bg-white">
+        <div class="h-8 w-8 rounded-full bg-gray-100 mb-4"></div>
+        <h3 class="text-h4 font-sans">Forward Research.</h3>
+        <p class="text-p3 font-sans mt-2 text-secondaryLight4">
+          Invests in new ideas to drive progress over the long‑term in areas that matter most to free and open societies.
+        </p>
+        <a href="#" class="mt-4 inline-block bg-orange text-white px-4 py-2 font-mono">Fund Your Initiative →</a>
+      </article>
+
+      <!-- AR.IO -->
+      <article class="border border-gray-200 p-6 bg-white">
+        <div class="h-8 w-24 bg-gray-100 mb-4"></div>
+        <h3 class="text-h4 font-sans">AR.IO.</h3>
+        <p class="text-p3 font-sans mt-2 text-secondaryLight4">
+          Developed a grants program to help empower and incentivize the AR.IO community to contribute to the Network’s long‑term success.
+        </p>
+        <a href="#" class="mt-4 inline-block bg-orange text-white px-4 py-2 font-mono">Fund Your Next Endeavor →</a>
+      </article>
+
+      <!-- Permadao -->
+      <article class="border border-gray-200 p-6 bg-white">
+        <div class="h-8 w-28 bg-gray-100 mb-4"></div>
+        <h3 class="text-h4 font-sans">Permadao.</h3>
+        <p class="text-p3 font-sans mt-2 text-secondaryLight4">
+          A co‑builder community building the next generation of permaweb apps.
+        </p>
+        <a href="#" class="mt-4 inline-block bg-orange text-white px-4 py-2 font-mono">Fund Your Work →</a>
+      </article>
+    </div>
+
+    <!-- Bottom row: 2 orgs wider -->
+    <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <!-- Longview Labs -->
+      <article class="border border-gray-200 p-6 bg-white">
+        <div class="h-8 w-36 bg-gray-100 mb-4"></div>
+        <h3 class="text-h4 font-sans">Longview Labs.</h3>
+        <p class="text-p3 font-sans mt-2 text-secondaryLight4">
+          Produce educational content, digital products, and community experiences.
+        </p>
+        <a href="#" class="mt-4 inline-block bg-orange text-white px-4 py-2 font-mono">Fund Your Community Projects →</a>
+      </article>
+
+      <!-- Hansa -->
+      <article class="border border-gray-200 p-6 bg-white">
+        <div class="h-8 w-24 bg-gray-100 mb-4"></div>
+        <h3 class="text-h4 font-sans">Hansa.</h3>
+        <p class="text-p3 font-sans mt-2 text-secondaryLight4">
+          Invests in new ideas to drive progress over the long‑term in areas that matter most to free and open societies.
+        </p>
+        <a href="#" class="mt-4 inline-block bg-orange text-white px-4 py-2 font-mono">Fund Your Initiative →</a>
+      </article>
+    </div>
   </section>
 </Layout>

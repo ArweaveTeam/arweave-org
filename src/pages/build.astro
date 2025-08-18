@@ -5,7 +5,159 @@ import Resource from "../components/Resource.astro";
 ---
 
 <Layout title="Build on Arweave">
-  <section id="build" aria-label="Build on Arweave">
-    <Container className="relative z-10 "> Build on Arweave. </Container>
+  <section class="relative z-10" id="build" aria-label="Build on Arweave" class="pb-12">
+
+      <!-- Kicker -->
+      <div class="text-kicker font-mono">Build Arweave.</div>
+
+      <!-- Headline -->
+      <h1 class="text-h1 lg:text-[56px] font-sans mt-2">Host your web app.</h1>
+
+      <!-- Paragraph -->
+      <p class="text-p1 lg:text-[16px] font-sans mt-3 max-w-4xl">
+        Let's build on Arweave, which ensures your web app is permanently accessible online. This guarantees that your
+        application remains available to users, eliminating the risk of being taken down or lost.
+      </p>
+
+      <!-- Content + Right sidebar layout -->
+      <div class="mt-10 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_350px] gap-8 items-start">
+        <!-- Main content: steps -->
+        <div class="flex flex-col gap-8">
+          <!-- Step 1 -->
+          <section>
+            <h3 class="text-h2 font-mono">Step 1: Upload your file.</h3>
+            <p class="text-p3 font-sans mt-2 text-secondaryLight2">You can upload your file for free and access it immediately after. Make sure it's under 100kb.</p>
+            <p class="text-p3 font-sans mt-2 text-secondaryLight2">You can upload your file for free and access it immediately after. Make sure it's under 100kb.</p>
+            <p class="text-p3 font-sans mt-2 text-secondaryLight2">You can upload your file for free and access it immediately after. Make sure it's under 100kb.</p>
+          </section>
+
+          <!-- Step 2 -->
+          <section>
+            <h3 class="text-h2 font-mono">Step 2: Upload your code.</h3>
+            <p class="text-p3 font-sans mt-2 text-secondaryLight2">You can upload your file for free and access it immediately after. Make sure its under 100kb.</p>
+          </section>
+
+          <!-- Step 3 -->
+          <section>
+            <h3 class="text-h2 font-mono">Step 3: …</h3>
+            <p class="text-p3 font-sans mt-2 text-secondaryLight2">You can upload your file for free and access it immediately after. Make sure its under 100kb.</p>
+          </section>
+
+          <!-- Step 4 -->
+          <section>
+            <h3 class="text-h2 font-mono">Step 4: Path Manifests.</h3>
+            <p class="text-p3 font-sans mt-2 text-secondaryLight2">You can upload your file for free and access it immediately after. Make sure its under 100kb.</p>
+          </section>
+
+          <!-- Step 5 -->
+          <section>
+            <h3 class="text-h2 font-mono">Step 5: Build needs static output.</h3>
+            <p class="text-p3 font-sans mt-2 text-secondaryLight2">You can upload your file for free and access it immediately after. Make sure its under 100kb.</p>
+          </section>
+        </div>
+
+        <!-- Right sidebar: dropzone mock (fixed ~350px) -->
+        <aside class="w-full lg:w-[350px] max-w-full border border-gray-200 p-6 justify-self-end">
+          <div class="grid grid-cols-2 items-end border-b border-gray-200">
+            <div class="text-left font-mono text-[12px] tracking-[0.08em] py-2 border-b-2 border-orange text-orange">Host</div>
+            <div class="text-left font-mono text-[12px] tracking-[0.08em] py-2 text-secondaryLight2">Visit</div>
+          </div>
+          <div class="mt-6 h-56 border-2 border-dashed border-gray-300 flex items-center justify-center text-center">
+            <div>
+              <div class="font-mono">Drag and Deploy</div>
+              <div class="text-p3 text-secondaryLight2">Under &lt;100KB</div>
+              <div class="text-p3 mt-2">or <span class="underline">choose file</span> to upload</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+  </section>
+
+  <!-- Data-focused developer section -->
+  <section class="pt-24" aria-label="Develop with data">
+
+      <h2 class="text-h1 lg:text-[56px] font-sans">Develop with a foundation of data.</h2>
+
+      <!-- Cards grid: 4+1 layout on large screens -->
+      <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Left large card spans 4 columns -->
+        <article class="border border-gray-200 p-6 lg:col-span-2 lg:row-span-2 flex flex-col justify-between min-h-[300px]">
+          <div>
+            <h3 class="text-h4 font-sans">Get Started Developing.</h3>
+            <p class="text-p2 font-sans mt-2 text-secondaryLight4">
+              Your application remains accessible to everyone, forever, without the risk of censorship or removal. Visit the permaweb cookbook to start.
+            </p>
+          </div>
+          <div class="mt-6">
+            <a href="#" class="inline-block bg-orange text-white px-4 py-2 font-mono">Visit the Permaweb Cookbook →</a>
+          </div>
+        </article>
+
+        <!-- Right column top: Dev Utility Tools -->
+        <article class="border border-gray-200 p-6 flex flex-col justify-between min-h-[300px] lg:col-start-3">
+          <div>
+            <h3 class="text-h4 font-sans">Dev Utility Tools.</h3>
+            <p class="text-p3 font-sans mt-2 text-secondaryLight4">
+              Build with ar.io’s comprehensive suite of developer utility tools.
+            </p>
+          </div>
+          <div class="mt-4">
+            <a href="#" class="inline-block text-orange underline font-mono">Use ar.io’s development suite →</a>
+          </div>
+        </article>
+
+        <!-- Right column bottom: View history -->
+        <article class="border border-gray-200 p-6 flex flex-col justify-between min-h-[300px] lg:col-start-3">
+          <div>
+            <h3 class="text-h4 font-sans">View Arweave History.</h3>
+            <p class="text-p3 font-sans mt-2 text-secondaryLight4">
+              Blocks, accounts, transactions, protocols, and tokens.
+            </p>
+          </div>
+          <div class="mt-4">
+            <a href="#" class="inline-block text-orange underline font-mono">Visit Viewblock →</a>
+          </div>
+        </article>
+      </div>
+
+  </section>
+
+  <!-- Decentralized Compute section -->
+  <section class="py-24" aria-label="Decentralized Compute">
+
+      <h2 class="text-h3 font-sans">Decentralized Compute.</h2>
+      <p class="text-p2 font-sans mt-2 max-w-3xl text-secondaryLight4">
+        The permaweb foundation backs projects like AO and Hyperbeam, improving smart contracts and Arweave’s infrastructure. Here’s how to begin.
+      </p>
+
+      <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- AO Card -->
+        <article class="border border-gray-200 p-6 flex flex-col justify-between min-h-[220px]">
+          <div>
+            <div class="h-12 w-24 bg-gray-100 mb-4"></div>
+            <p class="text-p3 font-sans text-secondaryLight4">
+              Create and deploy processes (smart contracts) on Arweave.
+            </p>
+          </div>
+          <div class="mt-6">
+            <a href="#" class="inline-block bg-orange text-white px-4 py-2 font-mono">Explore AO Ecosystem →</a>
+          </div>
+        </article>
+
+        <!-- Hyperbeam Card -->
+        <article class="border border-gray-200 p-6 flex flex-col justify-between min-h-[220px]">
+          <div>
+            <div class="h-12 w-40 bg-gray-100 mb-4"></div>
+            <p class="text-p3 font-sans text-secondaryLight4">
+              Bringing web2 capabilities to the permaweb.
+            </p>
+          </div>
+          <div class="mt-6">
+            <a href="#" class="inline-block bg-orange text-white px-4 py-2 font-mono">Start Hyperbeam →</a>
+          </div>
+        </article>
+      </div>
+
   </section>
 </Layout>

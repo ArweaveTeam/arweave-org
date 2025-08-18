@@ -26,11 +26,11 @@ export default {
           { lineHeight: "159%", letterSpacing: "2px", fontWeight: "500" },
         ],
         kicker: [
-          "24px",
+          "18px",
           { lineHeight: "159%", letterSpacing: "1px", fontWeight: "400" },
         ],
         p1: [
-          "20px",
+          "12px",
           { lineHeight: "175%", letterSpacing: "0.04em", fontWeight: "400" },
         ],
         p2: [

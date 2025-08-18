@@ -1,11 +1,92 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Container from "../components/Container.astro";
-import TrustedBy from "../components/TrustedBy.astro";
 ---
 
-<Layout title="Use Arweave">
-  <section id="discover" aria-label="Discover Arweave">
-    <Container className="relative z-10"> Discover Arweave. </Container>
+<Layout title="Discover Arweave">
+  <section id="discover" aria-label="Discover Arweave" class="relative z-10 pb-12">
+    <!-- Kicker -->
+    <div class="text-kicker font-mono">Discover Arweave.</div>
+
+    <!-- Headline -->
+    <h1 class="text-h1 lg:text-[56px] font-sans mt-2">Find projects.</h1>
+
+    <!-- Paragraph -->
+    <p class="text-p2 font-sans mt-3 max-w-4xl text-secondaryLight4">
+      Apps & Infrastructure built on the foundation of permanent data.
+    </p>
+
+    <!-- Controls -->
+    <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4 items-center">
+      <div class="text-orange font-mono"><span id="result-count">0</span> projects</div>
+      <div class="lg:col-span-1">
+        <div class="relative">
+          <input id="search-input" type="text" placeholder="Search" class="w-full border border-gray-200 rounded px-3 py-2 pr-10 outline-none focus:border-orange" />
+          <span class="absolute right-3 top-1/2 -translate-y-1/2 text-secondaryLight2">🔍</span>
+        </div>
+      </div>
+      <div class="lg:col-span-1 lg:justify-self-end w-full">
+        <select id="category-select" class="w-full border border-gray-200 rounded px-3 py-2 outline-none focus:border-orange">
+          <option value="all">Select Category</option>
+          <option value="app">App</option>
+          <option value="protocol">Protocol</option>
+          <option value="infra">Infrastructure</option>
+          <option value="open-access">Open-access</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Results grid -->
+    <div id="results-grid" class="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6"></div>
+
+    <script>
+      // @ts-nocheck
+      document.addEventListener('DOMContentLoaded', () => {
+        const projects = Array.from({ length: 12 }).map((_, i) => ({
+          id: i + 1,
+          title: i % 3 === 0 ? 'Forward Research' : i % 3 === 1 ? 'PermaNews' : 'ArDrive',
+          desc: 'Placeholder description for a project on the permaweb. Stands out as a pioneering effort to advance the ecosystem with open tooling.',
+          category: i % 3 === 0 ? 'protocol' : i % 3 === 1 ? 'app' : 'infra',
+          tags: i % 2 === 0 ? ['protocol', 'open-access'] : ['app'],
+          incubator: i % 4 === 0,
+        }));
+
+        const searchEl = document.getElementById('search-input');
+        const selectEl = document.getElementById('category-select');
+        const gridEl = document.getElementById('results-grid');
+        const countEl = document.getElementById('result-count');
+
+        function render(list) {
+          countEl.textContent = String(list.length);
+          gridEl.innerHTML = list.map(p => `
+            <article class="border border-gray-200 p-6 bg-white">
+              <div class="flex items-start justify-between">
+                <div class="h-10 w-10 rounded-full border border-gray-300 flex items-center justify-center">f</div>
+                ${p.incubator ? '<span class="text-xxs px-2 py-1 border border-gray-200">Incubator</span>' : ''}
+              </div>
+              <h3 class="mt-4 text-h4 font-sans">${p.title}</h3>
+              <p class="mt-2 text-p3 text-secondaryLight4">${p.desc}</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                ${p.tags.map(t => `<span class=\"text-xxs px-2 py-1 border border-gray-200\">${t}</span>`).join('')}
+              </div>
+            </article>
+          `).join('');
+        }
+
+        function applyFilters() {
+          const q = (searchEl.value || '').toLowerCase();
+          const cat = selectEl.value;
+          const filtered = projects.filter(p => {
+            const matchesText = p.title.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q);
+            const matchesCat = cat === 'all' || p.category === cat || p.tags.includes(cat);
+            return matchesText && matchesCat;
+          });
+          render(filtered);
+        }
+
+        searchEl.addEventListener('input', applyFilters);
+        selectEl.addEventListener('change', applyFilters);
+        render(projects);
+      });
+    </script>
   </section>
 </Layout>

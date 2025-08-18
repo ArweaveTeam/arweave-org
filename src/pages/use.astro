@@ -5,7 +5,247 @@ import TrustedBy from "../components/TrustedBy.astro";
 ---
 
 <Layout title="Use Arweave">
-  <section id="use" aria-label="Use Arweave">
-    <Container className="relative z-10"> Use Arweave. </Container>
+  <section class="h-[calc(100vh-103px-32px)] flex flex-col pb-12" id="use" aria-label="Use Arweave">
+
+      <!-- Kicker -->
+      <div class="text-kicker lg:text-[20px] font-mono">Use Arweave.</div>
+
+      <!-- Headline -->
+      <h1 class="text-h1 lg:text-[56px] font-sans mt-2">Store data permanently.</h1>
+
+      <!-- Paragraph -->
+      <p class="text-p1 lg:text-[16px] font-sans mt-3 max-w-4xl">
+        Whether it's a personal photo or preservation of humanity's most important data, try it out with the hosting of truly decentralized and provably neutral web apps.
+      </p>
+
+      <!-- Steps Tabs -->
+      <div class="mt-10 h-full flex flex-col">
+        <div class="grid grid-cols-2 items-end border-b border-gray-200">
+          <button data-step-tab="1" type="button"
+            class="text-left font-mono text-[16px] font-bold tracking-[0.08em] py-3 pr-4 border-b-2 border-orange text-orange">
+            Step 1: Upload your file.
+          </button>
+          <button data-step-tab="2" type="button"
+            class="text-left font-mono text-[16px] font-bold tracking-[0.08em] py-3 pl-4 text-secondaryLight2">
+            Step 2: Access your file.
+          </button>
+        </div>
+
+        <!-- Step 1 Panel -->
+        <div data-step-panel="1" class="pt-6 h-full flex flex-col">
+          <h3 class="text-h2 font-mono">Step 1: Upload your file.</h3>
+          <p class="text-p3 font-sans mt-2 text-secondaryLight2">
+            You can upload your file for free and access it immediately after. Make sure it's under 100kb.
+          </p>
+
+          <!-- Dropzone -->
+          <div id="dropzone" class="w-full border-2 border-dashed border-gray-300 h-full items-center justify-center text-center cursor-pointer hover:border-orange transition-colors duration-150 flex flex-col">
+            <div class="text-orange">
+              <!-- Simple placeholder icon -->
+              <span class="block text-3xl">⬆️</span>
+            </div>
+            <div class="mt-4 font-mono">Drag and Drop</div>
+            <div class="text-secondaryLight2 text-p3">Under &lt;100KB</div>
+            <div class="mt-4 text-p3">
+              or <button type="button" class="underline" id="choose-file-btn">choose file</button> to upload
+            </div>
+            <div id="selected-file-name" class="mt-2 text-p3 text-secondaryLight4"></div>
+            <input id="file-input" type="file" class="hidden" />
+          </div>
+        </div>
+
+        <!-- Step 2 Panel -->
+        <div data-step-panel="2" class="pt-6 hidden h-full">
+          <h3 class="text-h2 font-mono">Step 2: Access your file.</h3>
+          <p class="text-p2 font-sans mt-2 text-secondaryLight2">
+            Once your file is uploaded, you can easily access it through the Wayfinder protocol on Arweave.
+          </p>
+
+          <div class="mt-8 w-full border border-gray-200 p-10 lg:p-16 text-center h-full">
+            <div class="mx-auto h-24 w-24 border-2 border-gray-300 flex items-center justify-center">
+              <!-- Check icon -->
+              <svg id="uploaded-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-10 w-10 text-green-500">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div class="mt-4 text-p3 text-secondaryLight4">File Uploaded</div>
+
+            <a id="view-link" href="#" target="_blank" rel="noopener" class="mt-6 inline-block text-orange underline font-mono">View your file on Arweave</a>
+
+            <div class="mt-8 space-y-2 font-mono text-secondaryLight4">
+              <div>
+                Address: <span id="address-el" class="select-all">—</span>
+              </div>
+              <div class="flex items-center justify-center gap-6">
+                <span>Size: <span id="size-el">—</span></span>
+                <span>File Type: <span id="type-el">—</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</section>
+    <!-- Next Section: Tutorial and Resources -->
+
+    <section class="pb-12 h-[calc(100vh-103px-32px)]" id="resources" aria-label="Use Arweave: Examples">
+      <!-- Upload Tutorial card -->
+      <div class="border border-gray-200 p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="max-w-2xl">
+          <h3 class="text-h3 font-sans">Upload Tutorial.</h3>
+          <p class="text-p2 font-sans mt-2 text-secondaryLight4">
+            You can upload your file for free and access it immediately after.
+          </p>
+          <a href="#use" class="inline-block mt-6 bg-orange text-white px-4 py-2 font-mono">
+            Start Storing Files →
+          </a>
+        </div>
+        <!-- Right-side placeholder visuals -->
+        <div class="flex items-center gap-6 ml-auto">
+          <div class="h-12 w-12 bg-gray-100 border border-gray-200"></div>
+          <div class="h-12 w-12 bg-gray-100 border border-gray-200"></div>
+          <div class="h-12 w-12 bg-gray-100 border border-gray-200"></div>
+        </div>
+      </div>
+
+      <!-- Resource cards grid -->
+      <div class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Card: Read About Arweave -->
+        <article class="border border-gray-200 overflow-hidden">
+          <div class="h-56 bg-gray-100"></div>
+          <div class="p-6">
+            <h4 class="text-h4 font-sans">Read About Arweave.</h4>
+            <p class="text-p3 font-sans mt-2 text-secondaryLight4">
+              Dive deep into the culture and news on Arweave.
+            </p>
+            <a href="#" class="mt-4 inline-block text-orange font-mono underline">Read Permaweb Journal →</a>
+          </div>
+        </article>
+
+        <!-- Card: Permanent Cloud Storage -->
+        <article class="border border-gray-200 overflow-hidden">
+          <div class="h-56 bg-gray-100"></div>
+          <div class="p-6">
+            <h4 class="text-h4 font-sans">Permanent Cloud Storage.</h4>
+            <p class="text-p3 font-sans mt-2 text-secondaryLight4">
+              Pay once, store forever with Arweave's permanent data storage.
+            </p>
+            <a href="#" class="mt-4 inline-block text-orange font-mono underline">Store on ArDrive →</a>
+          </div>
+        </article>
+
+        <!-- Card: Get Wallet -->
+        <article class="border border-gray-200 overflow-hidden">
+          <div class="h-56 bg-gray-100"></div>
+          <div class="p-6">
+            <h4 class="text-h4 font-sans">Get Wallet.</h4>
+            <p class="text-p3 font-sans mt-2 text-secondaryLight4">
+              Choose an Arweave wallet that suits your device compatibility and personal preferences.
+            </p>
+            <a href="#" class="mt-4 inline-block text-orange font-mono underline">Choose Your Wallet →</a>
+          </div>
+        </article>
+
+        <!-- Card: Smart Contracts -->
+        <article class="border border-gray-200 overflow-hidden">
+          <div class="h-56 bg-gray-100"></div>
+          <div class="p-6">
+            <h4 class="text-h4 font-sans">Smart Contracts.</h4>
+            <p class="text-p3 font-sans mt-2 text-secondaryLight4">
+              Create and deploy smart contracts that leverage its decentralized storage capabilities.
+            </p>
+            <a href="#" class="mt-4 inline-block text-orange font-mono underline">Develop on AO →</a>
+          </div>
+        </article>
+      </div>
+
+
+    <script>
+      // @ts-nocheck
+      document.addEventListener('DOMContentLoaded', () => {
+        const tabs = document.querySelectorAll('[data-step-tab]');
+        const panels = document.querySelectorAll('[data-step-panel]');
+
+        function setActive(step) {
+          tabs.forEach((t) => {
+            const isActive = t.getAttribute('data-step-tab') === step;
+            t.classList.toggle('text-orange', isActive);
+            t.classList.toggle('border-b-2', isActive);
+            t.classList.toggle('border-orange', isActive);
+            t.classList.toggle('text-secondaryLight2', !isActive);
+          });
+          panels.forEach((p) => {
+            const isPanel = p.getAttribute('data-step-panel') === step;
+            if (isPanel) {
+              p.classList.remove('hidden');
+              p.classList.add('flex', 'flex-col');
+            } else {
+              p.classList.add('hidden');
+              p.classList.remove('flex', 'flex-col');
+            }
+          });
+        }
+
+        tabs.forEach((t) =>
+          t.addEventListener('click', () => setActive(t.getAttribute('data-step-tab')))
+        );
+
+        // File interactions
+        const dz = document.getElementById('dropzone');
+        const finputEl = document.getElementById('file-input');
+        const chooseBtn = document.getElementById('choose-file-btn');
+        const nameEl = document.getElementById('selected-file-name');
+
+        function randomId(len = 43) {
+          const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_' ;
+          let out = '';
+          for (let i = 0; i < len; i++) out += alphabet[Math.floor(Math.random() * alphabet.length)];
+          return out;
+        }
+
+        function setName(file) {
+          if (!file) return;
+          if (nameEl) nameEl.textContent = file.name;
+          // Populate Step 2 details
+          const tx = randomId();
+          const linkEl = document.getElementById('view-link');
+          const addr = document.getElementById('address-el');
+          const sizeEl = document.getElementById('size-el');
+          const typeEl = document.getElementById('type-el');
+          if (linkEl) linkEl.setAttribute('href', `https://arweave.net/${tx}`);
+          if (addr) addr.textContent = tx;
+          if (sizeEl) sizeEl.textContent = `${Math.round(file.size / 1024)}kb`;
+          if (typeEl) typeEl.textContent = (file.type?.split('/')[1] || file.name.split('.').pop() || 'unknown');
+          // Switch to Step 2 automatically
+          setActive('2');
+        }
+
+        if (dz && finputEl) {
+          dz.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dz.classList.add('border-orange');
+          });
+          dz.addEventListener('dragleave', () => dz.classList.remove('border-orange'));
+          dz.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dz.classList.remove('border-orange');
+            const file = e.dataTransfer?.files?.[0];
+            if (file) setName(file);
+          });
+          dz.addEventListener('click', () => {
+            if (finputEl instanceof HTMLInputElement) finputEl.click();
+          });
+          if (chooseBtn) chooseBtn.addEventListener('click', () => {
+            if (finputEl instanceof HTMLInputElement) finputEl.click();
+          });
+          if (finputEl instanceof HTMLInputElement) {
+            finputEl.addEventListener('change', () => setName(finputEl.files?.[0]));
+          }
+        }
+
+        // Initialize to Step 1
+        setActive('1');
+      });
+    </script>
   </section>
 </Layout>
