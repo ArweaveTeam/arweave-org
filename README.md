@@ -2,6 +2,8 @@
 
 The latest version of Arweave.org is built using [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com/).
 
+We deploy this on the permaweb using an arns, and then use https://github.com/permaweb/arweave-org-DnsProxy to route the domain.
+
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/ArweaveTeam/arweave-org)
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/ArweaveTeam/arweave-org)
 
