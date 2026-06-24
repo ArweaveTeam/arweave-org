@@ -9,9 +9,11 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "DEPLOY_KEY=$(base64 -i jwk.json) permaweb-deploy --arns-name ar -t 60",
-    "test-deploy": "DEPLOY_KEY=$(base64 -i jwk.json) permaweb-deploy --arns-name ar -t 60 --undername test",
-    "balance": "curl -s https://payment.ardrive.io/v1/balance?address=Qa8AAZv-sEhQRIm7xZr3CVLtlzIH8NezaY0GZhURcAc  | jq '.effectiveBalance | tonumber / 1e12'"
+    "deploy:arns": "DEPLOY_KEY=$(base64 -i jwk.json) permaweb-deploy --arns-name ar -t 60",
+    "deploy:arns-test": "DEPLOY_KEY=$(base64 -i jwk.json) permaweb-deploy --arns-name ar -t 60 --undername test",
+    "balance": "curl -s https://payment.ardrive.io/v1/balance?address=Qa8AAZv-sEhQRIm7xZr3CVLtlzIH8NezaY0GZhURcAc  | jq '.effectiveBalance | tonumber / 1e12'",
+    "deploy:test": "npm run build && DEPLOY_KEY=$(base64 -i jwk.json) permaweb-deploy deploy --use-names --name  test_ar --deploy-folder ./dist ",
+    "deploy": "npm run build && DEPLOY_KEY=$(base64 -i jwk.json) permaweb-deploy deploy --use-names --name ar --deploy-folder ./dist "
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -22,10 +24,13 @@
     "@types/react-dom": "^18.3.7",
     "astro": "^5.12.3",
     "http-server": "^14.1.1",
-    "permaweb-deploy": "^2.5.0",
+    "permaweb-deploy": "^5.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwindcss": "^3.4.15",
     "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "@permaweb/arx": "^1.0.0"
   }
 }
