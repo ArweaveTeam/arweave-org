@@ -3,7 +3,7 @@ import { Popover } from '@headlessui/react'
 import clsx from 'clsx'
 
 const sections = [
-  { id: '/', title: 'Discover.', icon: '🏠' },
+  { id: '/', title: 'Info.', icon: '🏠' },
   { id: '/use', title: 'Use.', icon: '👤' },
   { id: '/build', title: 'Build.', icon: '</>' },
   { id: '/funding', title: 'Get Funded.', icon: '$' },
